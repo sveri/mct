@@ -22,10 +22,21 @@
         <textarea class="form-control" id="question" name="question">{{question.question}}</textarea>
     </div>
 
-    {% for i in quest_count %}
-
+    {% for answer in question.answer %}
         <div class="form-group">
-            <label for="answer_{{i}}">{{question.answer[0].answer}} Answer {{i}}</label>
+            <input type="hidden" name="answer_uuid_{{forloop.counter0}}">
+            <label for="answer_{{forloop.counter}}">Answer {{forloop.counter}}</label>
+            <textarea class="form-control" id="answer_{{forloop.counter}}" name="answer_{{forloop.counter}}">{{answer.answer}}
+            </textarea>
+            <label for="answer_correct_{{forloop.counter}}">Answer {{forloop.counter}} Correct?</label>
+            <input type="checkbox" id="answer_correct_{{forloop.counter}}" name="answer_correct_{{forloop.counter}}"
+                    {% ifequal "1" answer.correct %} checked {% endifequal %}>
+        </div>
+    {% endfor %}
+
+    {% for i in quest_count %}
+        <div class="form-group">
+            <label for="answer_{{i}}">{{answers.i.answer}} Answer {{i}}</label>
             <textarea class="form-control" id="answer_{{i}}" name="answer_{{i}}"></textarea>
             <label for="answer_correct_{{i}}">Answer {{i}} Correct?</label>
             <input type="checkbox" id="answer_correct_{{i}}" name="answer_correct_{{i}}">

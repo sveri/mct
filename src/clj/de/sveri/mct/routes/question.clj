@@ -21,9 +21,11 @@
 
 (defn update-page [id]
   (let [question (db/get-question-by-id id)]
-    (layout/render "question/create.html" {:question    question :create_update "Update"
-                                           :topics      (db-t/get-all-topics)
-                                           :quest_count (range 1 11)})))
+    (layout/render "question/create.html" {:question      question
+                                           ;:answers       answers
+                                           :create_update "Update"
+                                           :topics        (db-t/get-all-topics)
+                                           :quest_count   (range (+ 1 (count (:answer question))) 11)})))
 
 (defn delete-page [id]
   (layout/render "question/delete.html" {:id id}))

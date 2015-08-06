@@ -15,5 +15,6 @@
 (defentity question
            (belongs-to user {:fk :user_email})
            (belongs-to topic)
-           (has-many answer))
+           (has-many answer)
+           )
 

@@ -18,6 +18,7 @@
         a1 "a1"
         a2 "a2"]
     (select-option "#topic_id" {:value "4a5c29d8-05cf-4799-9959-779965732eed"})
+    (select "#answer_correct_1")
     (quick-fill-submit {"#question" q}
                        {"#answer_1" a1}
                        {"#answer_2" a2}
@@ -26,5 +27,6 @@
     (click (find-element {:tag :a, :text q}))
     (is (selected? "option[value='4a5c29d8-05cf-4799-9959-779965732eed']"))
     (is (.contains (text "#answer_1") a1))
-    (wait-until #(= (title) "iatern"))
+    (is (selected? "#answer_correct_1"))
+    ;(wait-until #(= (title) "iatern"))
     ))

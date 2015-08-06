@@ -16,3 +16,6 @@
   (update answer (set-fields fields) (where {:id id})))
 
 (defn delete-answer [id] (delete answer (where {:id id})))
+
+;(defn by-question [id]
+;  (vec (select answer (where {:question_id id}))))
