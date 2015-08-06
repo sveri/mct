@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/topic/create" class="btn btn-primary" role="button">Create New topic</a>
+
+<hr>
+
+<table class="table">
+    <thead>
+        <tr>
+            {% for col in cols %}
+                <td><b>{{col}}</b></td>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for topic in topics %}
+            <tr>
+                <td><a href="/topic/{{topic.id}}">{{topic.name}}</a></td>
+				<td>{{topic.topic_id}}</td>
+				<td><a class="btn btn-primary" href="/topic/delete/{{topic.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

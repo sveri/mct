@@ -1,0 +1,8 @@
+{:name    "question"
+ :columns [[:id :int :null false :pk true :autoinc true]
+           [:user_id :int :null false]
+           [:topic_id :int :null false]
+           [:question :text]
+           [:rating :int :null false :default 0]
+           [:rate_count :int :null false :default 0]
+           ]}

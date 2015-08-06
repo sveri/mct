@@ -1,0 +1,5 @@
+{:name    "answer"
+ :columns [[:id :int :null false :pk true :autoinc true]
+           [:question_id :int :null false]
+           [:corret :boolean :null false]
+           [:answer :text :null false]]}

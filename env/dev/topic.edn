@@ -1,0 +1,4 @@
+{:name    "topic"
+ :columns [[:id :int :null false :pk true :autoinc true]
+           [:topic_uuid :int :null false :unique true]
+           [:name [:varchar 255]]]}

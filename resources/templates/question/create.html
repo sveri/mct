@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/question/{{create_update|lower}}" class="form" method="post">
+    <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
+    <input name="uuid" type="hidden" value="{{question.id}}"/>
+
+    <div class="form-group">
+        <label for="topic_id">Topic</label>
+
+        <select id="topic_id" name="topic_id" class="form-control">
+            {% for topic in topics %}
+                <option value="{{topic.id}}"
+                        {% ifequal topic.id question.topic_id %} selected {% endifequal %}
+                        >{{topic.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="question">Question</label>
+        <textarea class="form-control" id="question" name="question">{{question.question}}</textarea>
+    </div>
+
+    {% for i in quest_count %}
+
+        <div class="form-group">
+            <label for="answer_{{i}}">{{question.answer[0].answer}} Answer {{i}}</label>
+            <textarea class="form-control" id="answer_{{i}}" name="answer_{{i}}"></textarea>
+            <label for="answer_correct_{{i}}">Answer {{i}} Correct?</label>
+            <input type="checkbox" id="answer_correct_{{i}}" name="answer_correct_{{i}}">
+        </div>
+    {% endfor %}
+
+    <button class="btn btn-primary" type="submit">{{create_update}} question</button>
+</form>
+
+{% endblock %}

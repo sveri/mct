@@ -1,0 +1,6 @@
+<select id="topic_uuid" name="topic_uuid" class="form-control">
+    <option value="none">None</option>
+    {% for topic in topics %}
+        <option value="{{topic.id}}">{{topic.name}}</option>
+    {% endfor %}
+</select>

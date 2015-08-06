@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/question/create" class="btn btn-primary" role="button">Create New question</a>
+
+<hr>
+
+<table class="table">
+    <thead>
+        <tr>
+            {% for col in cols %}
+                <td><b>{{col}}</b></td>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for question in questions %}
+            <tr>
+                <td><a href="/question/{{question.id}}">{{question.question}}</a></td>
+				<td>{{question.topic_name}}</td>
+                <td>{{question.rating}}</td>
+                <td>{{question.rate_count}}</td>
+				<td><a class="btn btn-primary" href="/question/delete/{{question.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
