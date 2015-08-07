@@ -3,6 +3,13 @@
             [clj-webdriver.taxi :refer :all]
             [de.sveri.mct.web.setup :as s]))
 
+(defn sign-in [& [name pw link]]
+  (to (str s/test-base-url (or link "admin/users")))
+  (quick-fill-submit {"#upper_email" (or name "admin@localhost.de")}
+                     {"#upper_password" (or pw "admin")}
+                     {"#upper_password" submit}))
+
+
 (use-fixtures :each s/browser-setup)
 (use-fixtures :once s/server-setup)
 

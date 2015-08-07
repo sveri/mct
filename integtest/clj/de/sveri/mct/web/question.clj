@@ -1,19 +1,14 @@
 (ns de.sveri.mct.web.question
   (:require [de.sveri.mct.web.setup :as s]
             [clojure.test :refer :all]
-            [clj-webdriver.taxi :refer :all]))
+            [clj-webdriver.taxi :refer :all]
+            [de.sveri.mct.web.user :as u]))
 
 (use-fixtures :each s/browser-setup)
 (use-fixtures :once s/server-setup)
 
-(defn sign-in [& [name pw link]]
-  (to (str s/test-base-url (or link "admin/users")))
-  (quick-fill-submit {"#upper_email" (or name "admin@localhost.de")}
-                     {"#upper_password" (or pw "admin")}
-                     {"#upper_password" submit}))
-
 (deftest ^:integration create-question
-  (sign-in "local@local.de" "local" "question/create")
+  (u/sign-in "local@local.de" "local" "question/create")
   (let [q "quest1"
         a1 "a1"
         a2 "a2"]
@@ -30,7 +25,7 @@
     (is (selected? "#answer_correct_1"))))
 
 (deftest ^:integration update-question
-  (sign-in "local@local.de" "local" "question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb")
+  (u/sign-in "local@local.de" "local" "question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb")
   (clear "#question")
   (clear "#answer_1")
   (select-option "#topic_id" {:value "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb"})
@@ -54,9 +49,9 @@
   ;(wait-until #(= (title) "iatern"))
 
 (deftest ^:integration admin-sees-all
-  (sign-in "admin@localhost.de" "admin" "question")
+  (u/sign-in "admin@localhost.de" "admin" "question")
   (is (= 3 (count (find-elements {:tag :a, :text "Delete"})))))
 
 (deftest ^:integration user-sees-own
-  (sign-in "local@local.de" "local" "question")
+  (u/sign-in "local@local.de" "local" "question")
   (is (= 2 (count (find-elements {:tag :a, :text "Delete"})))))
