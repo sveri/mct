@@ -14,3 +14,6 @@ INSERT INTO question (id, user_email, topic_id, question)
 
 INSERT INTO question (id, user_email, topic_id, question)
   VALUES ('e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb', 'local@local.de', '4a5c29d8-05cf-4799-9959-779965732eed', 'question 2');
+
+INSERT INTO question (id, user_email, topic_id, question)
+  VALUES ('e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba7cb', 'admin@localhost.de', '4a5c29d8-05cf-4799-9959-779965732eed', 'question 3');

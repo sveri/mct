@@ -50,6 +50,13 @@
     (is (.contains (text "#answer_1") a1))
     (is (.contains (text "#answer_5") a5))
     (is (.contains (text "#answer_6") a7))
-    (is (selected? "#answer_correct_3")))
+    (is (selected? "#answer_correct_3"))))
   ;(wait-until #(= (title) "iatern"))
-  )
+
+(deftest ^:integration admin-sees-all
+  (sign-in "admin@localhost.de" "admin" "question")
+  (is (= 3 (count (find-elements {:tag :a, :text "Delete"})))))
+
+(deftest ^:integration user-sees-own
+  (sign-in "local@local.de" "local" "question")
+  (is (= 2 (count (find-elements {:tag :a, :text "Delete"})))))
