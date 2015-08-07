@@ -13,13 +13,9 @@
 ; This fixture is intended to perform setup/teardown for each individual test in the namespace. Note that it assumes the :once fixture will handle creating/destroying the DB, while we only create/drop tables within the DB.
 (defn db-setup [f]
   (do
-    (j/rollback-db
+    (j/reset-db
       {:db {:type :sql,
             :url db-uri}
-       :migrator migrators})
-    (j/migrate-db
-      {:db       {:type :sql,
-                  :url  db-uri}
        :migrator migrators}))
   (f))
 

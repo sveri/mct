@@ -27,3 +27,6 @@
   (update question (set-fields fields) (where {:id id})))
 
 (defn delete-question [id] (delete question (where {:id id})))
+
+(defn get-random-question [topic_id]
+  )
