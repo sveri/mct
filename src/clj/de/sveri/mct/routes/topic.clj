@@ -48,7 +48,7 @@
     (GET "/topic" [] (index-page))
     (GET "/topic/create" [] (create-page))
     (GET "/topic/:id" [id] (update-page id))
-    (POST "/topic/create" [name ] (create name ))
+    (POST "/topic/create" [name] (create name))
     (GET "/topic/delete/:id" [id] (delete-page id))
     (POST "/topic/delete" [id delete_cancel] (delete id delete_cancel))
     (POST "/topic/update" [id topic_id name ] (update id topic_id name ))))

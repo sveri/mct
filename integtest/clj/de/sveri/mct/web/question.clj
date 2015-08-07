@@ -36,17 +36,17 @@
         a5 "a5"
         a7 "a7"]
     (quick-fill-submit {"#question" q}
-                      {"#answer_1" a1}
-                      {"#answer_5" a5}
-                      {"#answer_7" a7}
-                      {"#question" submit})
+                       {"#answer_1" a1}
+                       {"#answer_5" a5}
+                       {"#answer_7" a7}
+                       {"#question" submit})
     (click (find-element {:tag :a, :text q}))
     (is (selected? "option[value='e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb']"))
     (is (.contains (text "#answer_1") a1))
     (is (.contains (text "#answer_5") a5))
     (is (.contains (text "#answer_6") a7))
     (is (selected? "#answer_correct_3"))))
-  ;(wait-until #(= (title) "iatern"))
+;(wait-until #(= (title) "iatern"))
 
 (deftest ^:integration admin-sees-all
   (u/sign-in "admin@localhost.de" "admin" "question")

@@ -3,11 +3,11 @@
 
 <form action="/topic/{{create_update|lower}}" class="form" method="post">
     <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
-    <input name="uuid" type="hidden" value="{{topic.id}}"/>
+    <input name="id" type="hidden" value="{{topic.id}}"/>
 
     <div class="form-group">
-        <label for="topic_uuid">Parent Topic</label>
-        <select id="topic_uuid" name="topic_uuid" class="form-control">
+        <label for="topic_id">Parent Topic</label>
+        <select id="topic_id" name="topic_id" class="form-control">
             <option value="none">None</option>
             {% for topic in topics %}
                 <option value="{{topic.id}}"
@@ -18,8 +18,8 @@
     </div>
 
     <div class="form-group">
-        <label for="name">Name</label>
-        <input class="form-control" id="name" maxlength="255" name="name" value="{{topic.name}}"/>
+        <label for="topic-name">Name</label>
+        <input class="form-control" id="topic-name" maxlength="255" name="name" value="{{topic.name}}" required/>
     </div>
 
     <button class="btn btn-primary" type="submit">{{create_update}} topic</button>
