@@ -3,7 +3,7 @@
 
 <form action="/question/{{create_update|lower}}" class="form" method="post">
     <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
-    <input name="uuid" type="hidden" value="{{question.id}}"/>
+    <input name="id" type="hidden" value="{{question.id}}"/>
 
     <div class="form-group">
         <label for="topic_id">Topic</label>
@@ -24,7 +24,7 @@
 
     {% for answer in question.answer %}
         <div class="form-group">
-            <input type="hidden" name="answer_uuid_{{forloop.counter0}}">
+            <input type="hidden" name="answer_id_{{forloop.counter}}" value="{{answer.id}}">
             <label for="answer_{{forloop.counter}}">Answer {{forloop.counter}}</label>
             <textarea class="form-control" id="answer_{{forloop.counter}}" name="answer_{{forloop.counter}}">{{answer.answer}}
             </textarea>

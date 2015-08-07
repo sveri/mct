@@ -12,8 +12,13 @@
 (defn create-answer [data]
   (insert answer (values (merge data {:id (str (UUID/randomUUID))}))))
 
-(defn update-answer [id] fields
+(defn update-answer [id fields]
   (update answer (set-fields fields) (where {:id id})))
+
+(defn create-or-update [data]
+  (if-let [id (:id data)]
+    (update-answer id data)
+    (create-answer data)))
 
 (defn delete-answer [id] (delete answer (where {:id id})))
 

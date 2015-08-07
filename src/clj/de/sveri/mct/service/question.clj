@@ -9,7 +9,7 @@
       (let [answer ((keyword (str "answer_" idx)) params)]
         (if (seq answer)
           (conj a {:question_id q-uuid :correct (correct->boolean idx params)
-                   :answer      answer})
+                   :answer      answer :id ((keyword (str "answer_id_" idx)) params)})
           a)))
     [] (range 1 (+ 1 a-count))))
 

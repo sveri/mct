@@ -2183,3 +2183,606 @@
 -=[ mct started successfully using the development profile ]=-
 2015-Aug-06 21:48:47 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
 2015-Aug-06 21:48:47 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-06 22:04:21 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-06 22:04:28 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-06 22:04:28 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-06 22:04:55 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-06 22:05:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-06 22:05:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-06 22:05:23 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-06 22:05:35 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-06 22:05:35 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-06 22:09:02 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-06 22:09:14 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-06 22:09:14 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:34:52 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:34:58 +0200 SveriCaroLaptop ERROR [de.sveri.mct.routes.question] - Something went wrong updating: 
+[1;31mjava.sql.SQLException[m: [3m[SQLITE_ERROR] SQL error or missing database (no such column: user_id)[m
+    [1merrorCode[m: 1
+                                                       [37morg.sqlite.core.DB.newSQLException[m  [32m                    DB.java:  890[m
+                                                       [37morg.sqlite.core.DB.newSQLException[m  [32m                    DB.java:  901[m
+                                                               [37morg.sqlite.core.DB.throwex[m  [32m                    DB.java:  868[m
+                                                         [37morg.sqlite.core.NativeDB.prepare[m  [32m              NativeDB.java      [m
+                                                               [37morg.sqlite.core.DB.prepare[m  [32m                    DB.java:  211[m
+                                             [37morg.sqlite.core.CorePreparedStatement.<init>[m  [32m CorePreparedStatement.java:   40[m
+                                           [37morg.sqlite.jdbc3.JDBC3PreparedStatement.<init>[m  [32mJDBC3PreparedStatement.java:   29[m
+                                           [37morg.sqlite.jdbc4.JDBC4PreparedStatement.<init>[m  [32mJDBC4PreparedStatement.java:   18[m
+                                        [37morg.sqlite.jdbc4.JDBC4Connection.prepareStatement[m  [32m       JDBC4Connection.java:   47[m
+                                        [37morg.sqlite.jdbc3.JDBC3Connection.prepareStatement[m  [32m       JDBC3Connection.java:  254[m
+                                        [37morg.sqlite.jdbc3.JDBC3Connection.prepareStatement[m  [32m       JDBC3Connection.java:  226[m
+                                                      [33mclojure.java.jdbc/[1;33mprepare-statement[m  [32m                   jdbc.clj:  457[m
+                                                               [37mclojure.lang.RestFn.invoke[m  [32m                RestFn.java:  425[m
+                                                         [33mclojure.java.jdbc/[1;33mdb-do-prepared[m  [32m                   jdbc.clj:  752[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m                RestFn.java:  142[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                   core.clj:  636[m
+                                                         [33mclojure.java.jdbc/[1;33mdb-do-prepared[m  [32m                   jdbc.clj:  748[m
+                                                               [37mclojure.lang.RestFn.invoke[m  [32m                RestFn.java:  442[m
+                                                                        [33mkorma.db/[1;33mexec-sql[m  [32m                     db.clj:  263[m
+                                                                        [33mkorma.db/[1;33mdo-query[m  [32m                     db.clj:  277[m
+                                                                          [33mkorma.core/[1;33mexec[m  [32m                   core.clj:  498[m
+                                                 [33mde.sveri.mct.db.question/[1;33mupdate-question[m  [32m               question.clj:   25[m
+                                                   [33mde.sveri.mct.routes.question/update/[1;33mfn[m  [32m               question.clj:   53[m
+                                                      [33mde.sveri.mct.routes.question/[1;33mupdate[m  [32m               question.clj:   52[m
+                                          [33mde.sveri.mct.routes.question/question-routes/[1;33mfn[m  [32m               question.clj:   75[m
+                                                             [33mcompojure.core/make-route/[1;33mfn[m  [32m                   core.clj:  130[m
+                                                  [33mcompojure.core/wrap-route-middleware/[1;33mfn[m  [32m                   core.clj:  118[m
+                                                               [33mcompojure.core/if-route/[1;33mfn[m  [32m                   core.clj:   41[m
+                                                              [33mcompojure.core/if-method/[1;33mfn[m  [32m                   core.clj:   27[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                   core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                   core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                   core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m                RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                   core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                   core.clj:  149[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                   core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                   core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                   core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m                RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                   core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                   core.clj:  149[m
+                                            [33mde.sveri.mct.middleware/add-req-properties/[1;33mfn[m  [32m             middleware.clj:   27[m
+                                              [33mbuddy.auth.accessrules/wrap-access-rules/[1;33mfn[m  [32m            accessrules.clj:  347[m
+                                              [33mbuddy.auth.middleware/wrap-authorization/[1;33mfn[m  [32m             middleware.clj:   81[m
+                                               [33mnoir-exception.core/wrap-internal-error/[1;33mfn[m  [32m                   core.clj:  150[m
+                                                        [33mtaoensso.tower.ring/wrap-tower/[1;33mfn[m  [32m                   ring.clj:   53[m
+                                        [33mring.middleware.anti-forgery/wrap-anti-forgery/[1;33mfn[m  [32m           anti_forgery.clj:   90[m
+                               [33mde.sveri.clojure.commons.middleware.util/wrap-trimmings/[1;33mfn[m  [32m                   util.clj:   16[m
+                                                     [33mselmer.middleware/wrap-error-page/[1;33mfn[m  [32m             middleware.clj:    9[m
+                                                      [33mprone.middleware/wrap-exceptions/[1;33mfn[m  [32m             middleware.clj:   81[m
+                                             [33mclojure-miniprofiler/run-handler-profiled/[1;33mfn[m  [32m   clojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/[1;33mrun-handler-profiled[m  [32m   clojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/wrap-miniprofiler/[1;33mfn[m  [32m   clojure_miniprofiler.clj:  429[m
+                                                 [33mnoir.util.middleware/wrap-request-map/[1;33mfn[m  [32m             middleware.clj:   39[m
+                                    [33mring.middleware.keyword-params/wrap-keyword-params/[1;33mfn[m  [32m         keyword_params.clj:   35[m
+                                      [33mring.middleware.nested-params/wrap-nested-params/[1;33mfn[m  [32m          nested_params.clj:   84[m
+                                [33mring.middleware.multipart-params/wrap-multipart-params/[1;33mfn[m  [32m       multipart_params.clj:  117[m
+                                                    [33mring.middleware.params/wrap-params/[1;33mfn[m  [32m                 params.clj:   64[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m                cookies.clj:  161[m
+                            [33mring.middleware.absolute-redirects/wrap-absolute-redirects/[1;33mfn[m  [32m     absolute_redirects.clj:   36[m
+                                                [33mring.middleware.resource/wrap-resource/[1;33mfn[m  [32m               resource.clj:   28[m
+                                        [33mring.middleware.content-type/wrap-content-type/[1;33mfn[m  [32m           content_type.clj:   30[m
+                                        [33mring.middleware.not-modified/wrap-not-modified/[1;33mfn[m  [32m           not_modified.clj:   52[m
+                                         [33mring.middleware.x-headers/wrap-xss-protection/[1;33mfn[m  [32m              x_headers.clj:   71[m
+                                          [33mring.middleware.x-headers/wrap-frame-options/[1;33mfn[m  [32m              x_headers.clj:   38[m
+                                   [33mring.middleware.x-headers/wrap-content-type-options/[1;33mfn[m  [32m              x_headers.clj:   53[m
+                                                       [33mhiccup.middleware/wrap-base-url/[1;33mfn[m  [32m             middleware.clj:   12[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m          format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m          format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m          format_params.clj:  113[m
+                                  [33mring.middleware.format-response/wrap-format-response/[1;33mfn[m  [32m        format_response.clj:  174[m
+                                                  [33mnoir.validation/wrap-noir-validation/[1;33mfn[m  [32m             validation.clj:  155[m
+                                                             [33mnoir.cookies/noir-cookies/[1;33mfn[m  [32m                cookies.clj:   72[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m                cookies.clj:  161[m
+                                                               [33mnoir.session/noir-flash/[1;33mfn[m  [32m                session.clj:  158[m
+                                                      [33mring.middleware.flash/wrap-flash/[1;33mfn[m  [32m                  flash.clj:   35[m
+                                                             [33mnoir.session/noir-session/[1;33mfn[m  [32m                session.clj:  109[m
+                             [33mring.middleware.session-timeout/wrap-idle-session-timeout/[1;33mfn[m  [32m        session_timeout.clj:   25[m
+                                                  [33mring.middleware.session/wrap-session/[1;33mfn[m  [32m                session.clj:  102[m
+                                                        [33mring.middleware.file/wrap-file/[1;33mfn[m  [32m                   file.clj:   44[m
+                                              [33mring.middleware.file-info/wrap-file-info/[1;33mfn[m  [32m              file_info.clj:   69[m
+                                                    [33mring.middleware.reload/wrap-reload/[1;33mfn[m  [32m                 reload.clj:   22[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-log/[1;33mfn[m  [32m             stacktrace.clj:   23[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-web/[1;33mfn[m  [32m             stacktrace.clj:   86[m
+                                                      [33mring.adapter.jetty/proxy-handler/[1;33mfn[m  [32m                  jetty.clj:   24[m
+[37mring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle[m  [32m                                 [m
+                                   [37morg.eclipse.jetty.server.handler.HandlerWrapper.handle[m  [32m        HandlerWrapper.java:   97[m
+                                                   [37morg.eclipse.jetty.server.Server.handle[m  [32m                Server.java:  497[m
+                                              [37morg.eclipse.jetty.server.HttpChannel.handle[m  [32m           HttpChannel.java:  310[m
+                                       [37morg.eclipse.jetty.server.HttpConnection.onFillable[m  [32m        HttpConnection.java:  257[m
+                                            [37morg.eclipse.jetty.io.AbstractConnection$2.run[m  [32m    AbstractConnection.java:  540[m
+                                    [37morg.eclipse.jetty.util.thread.QueuedThreadPool.runJob[m  [32m      QueuedThreadPool.java:  635[m
+                                     [37morg.eclipse.jetty.util.thread.QueuedThreadPool$3.run[m  [32m      QueuedThreadPool.java:  555[m
+                                                                     [37mjava.lang.Thread.run[m  [32m                Thread.java:  745[m
+
+2015-Aug-07 08:34:59 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:34:59 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:35:22 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:35:32 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:35:32 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:35:34 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:35:44 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:35:44 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:35:49 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:36:01 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:36:01 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:36:48 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:36:55 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:36:55 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:37:43 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:37:50 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:37:50 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:40:07 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:40:13 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:40:13 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:41:49 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:41:57 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:41:57 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:42:11 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:42:18 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:42:18 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:43:16 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:43:27 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:43:27 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:43:35 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:43:47 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:43:47 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:46:40 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:46:47 +0200 SveriCaroLaptop ERROR [de.sveri.mct.routes.question] - Something went wrong updating: 
+[1;31mjava.sql.SQLException[m: [3m[SQLITE_ERROR] SQL error or missing database (no such column: user_id)[m
+    [1merrorCode[m: 1
+                                                       [37morg.sqlite.core.DB.newSQLException[m  [32m                    DB.java:  890[m
+                                                       [37morg.sqlite.core.DB.newSQLException[m  [32m                    DB.java:  901[m
+                                                               [37morg.sqlite.core.DB.throwex[m  [32m                    DB.java:  868[m
+                                                         [37morg.sqlite.core.NativeDB.prepare[m  [32m              NativeDB.java      [m
+                                                               [37morg.sqlite.core.DB.prepare[m  [32m                    DB.java:  211[m
+                                             [37morg.sqlite.core.CorePreparedStatement.<init>[m  [32m CorePreparedStatement.java:   40[m
+                                           [37morg.sqlite.jdbc3.JDBC3PreparedStatement.<init>[m  [32mJDBC3PreparedStatement.java:   29[m
+                                           [37morg.sqlite.jdbc4.JDBC4PreparedStatement.<init>[m  [32mJDBC4PreparedStatement.java:   18[m
+                                        [37morg.sqlite.jdbc4.JDBC4Connection.prepareStatement[m  [32m       JDBC4Connection.java:   47[m
+                                        [37morg.sqlite.jdbc3.JDBC3Connection.prepareStatement[m  [32m       JDBC3Connection.java:  254[m
+                                        [37morg.sqlite.jdbc3.JDBC3Connection.prepareStatement[m  [32m       JDBC3Connection.java:  226[m
+                                                      [33mclojure.java.jdbc/[1;33mprepare-statement[m  [32m                   jdbc.clj:  457[m
+                                                               [37mclojure.lang.RestFn.invoke[m  [32m                RestFn.java:  425[m
+                                                         [33mclojure.java.jdbc/[1;33mdb-do-prepared[m  [32m                   jdbc.clj:  752[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m                RestFn.java:  142[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                   core.clj:  636[m
+                                                         [33mclojure.java.jdbc/[1;33mdb-do-prepared[m  [32m                   jdbc.clj:  748[m
+                                                               [37mclojure.lang.RestFn.invoke[m  [32m                RestFn.java:  442[m
+                                                                        [33mkorma.db/[1;33mexec-sql[m  [32m                     db.clj:  263[m
+                                                                        [33mkorma.db/[1;33mdo-query[m  [32m                     db.clj:  277[m
+                                                                          [33mkorma.core/[1;33mexec[m  [32m                   core.clj:  498[m
+                                                 [33mde.sveri.mct.db.question/[1;33mupdate-question[m  [32m               question.clj:   25[m
+                                                   [33mde.sveri.mct.routes.question/update/[1;33mfn[m  [32m               question.clj:   53[m
+                                                      [33mde.sveri.mct.routes.question/[1;33mupdate[m  [32m               question.clj:   52[m
+                                          [33mde.sveri.mct.routes.question/question-routes/[1;33mfn[m  [32m               question.clj:   75[m
+                                                             [33mcompojure.core/make-route/[1;33mfn[m  [32m                   core.clj:  130[m
+                                                  [33mcompojure.core/wrap-route-middleware/[1;33mfn[m  [32m                   core.clj:  118[m
+                                                               [33mcompojure.core/if-route/[1;33mfn[m  [32m                   core.clj:   41[m
+                                                              [33mcompojure.core/if-method/[1;33mfn[m  [32m                   core.clj:   27[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                   core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                   core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                   core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m                RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                   core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                   core.clj:  149[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                   core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                   core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                   core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m                RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                   core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                   core.clj:  149[m
+                                            [33mde.sveri.mct.middleware/add-req-properties/[1;33mfn[m  [32m             middleware.clj:   27[m
+                                              [33mbuddy.auth.accessrules/wrap-access-rules/[1;33mfn[m  [32m            accessrules.clj:  347[m
+                                              [33mbuddy.auth.middleware/wrap-authorization/[1;33mfn[m  [32m             middleware.clj:   81[m
+                                               [33mnoir-exception.core/wrap-internal-error/[1;33mfn[m  [32m                   core.clj:  150[m
+                                                        [33mtaoensso.tower.ring/wrap-tower/[1;33mfn[m  [32m                   ring.clj:   53[m
+                                        [33mring.middleware.anti-forgery/wrap-anti-forgery/[1;33mfn[m  [32m           anti_forgery.clj:   90[m
+                               [33mde.sveri.clojure.commons.middleware.util/wrap-trimmings/[1;33mfn[m  [32m                   util.clj:   16[m
+                                                     [33mselmer.middleware/wrap-error-page/[1;33mfn[m  [32m             middleware.clj:    9[m
+                                                      [33mprone.middleware/wrap-exceptions/[1;33mfn[m  [32m             middleware.clj:   81[m
+                                             [33mclojure-miniprofiler/run-handler-profiled/[1;33mfn[m  [32m   clojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/[1;33mrun-handler-profiled[m  [32m   clojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/wrap-miniprofiler/[1;33mfn[m  [32m   clojure_miniprofiler.clj:  429[m
+                                                 [33mnoir.util.middleware/wrap-request-map/[1;33mfn[m  [32m             middleware.clj:   39[m
+                                    [33mring.middleware.keyword-params/wrap-keyword-params/[1;33mfn[m  [32m         keyword_params.clj:   35[m
+                                      [33mring.middleware.nested-params/wrap-nested-params/[1;33mfn[m  [32m          nested_params.clj:   84[m
+                                [33mring.middleware.multipart-params/wrap-multipart-params/[1;33mfn[m  [32m       multipart_params.clj:  117[m
+                                                    [33mring.middleware.params/wrap-params/[1;33mfn[m  [32m                 params.clj:   64[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m                cookies.clj:  161[m
+                            [33mring.middleware.absolute-redirects/wrap-absolute-redirects/[1;33mfn[m  [32m     absolute_redirects.clj:   36[m
+                                                [33mring.middleware.resource/wrap-resource/[1;33mfn[m  [32m               resource.clj:   28[m
+                                        [33mring.middleware.content-type/wrap-content-type/[1;33mfn[m  [32m           content_type.clj:   30[m
+                                        [33mring.middleware.not-modified/wrap-not-modified/[1;33mfn[m  [32m           not_modified.clj:   52[m
+                                         [33mring.middleware.x-headers/wrap-xss-protection/[1;33mfn[m  [32m              x_headers.clj:   71[m
+                                          [33mring.middleware.x-headers/wrap-frame-options/[1;33mfn[m  [32m              x_headers.clj:   38[m
+                                   [33mring.middleware.x-headers/wrap-content-type-options/[1;33mfn[m  [32m              x_headers.clj:   53[m
+                                                       [33mhiccup.middleware/wrap-base-url/[1;33mfn[m  [32m             middleware.clj:   12[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m          format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m          format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m          format_params.clj:  113[m
+                                  [33mring.middleware.format-response/wrap-format-response/[1;33mfn[m  [32m        format_response.clj:  174[m
+                                                  [33mnoir.validation/wrap-noir-validation/[1;33mfn[m  [32m             validation.clj:  155[m
+                                                             [33mnoir.cookies/noir-cookies/[1;33mfn[m  [32m                cookies.clj:   72[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m                cookies.clj:  161[m
+                                                               [33mnoir.session/noir-flash/[1;33mfn[m  [32m                session.clj:  158[m
+                                                      [33mring.middleware.flash/wrap-flash/[1;33mfn[m  [32m                  flash.clj:   35[m
+                                                             [33mnoir.session/noir-session/[1;33mfn[m  [32m                session.clj:  109[m
+                             [33mring.middleware.session-timeout/wrap-idle-session-timeout/[1;33mfn[m  [32m        session_timeout.clj:   25[m
+                                                  [33mring.middleware.session/wrap-session/[1;33mfn[m  [32m                session.clj:  102[m
+                                                        [33mring.middleware.file/wrap-file/[1;33mfn[m  [32m                   file.clj:   44[m
+                                              [33mring.middleware.file-info/wrap-file-info/[1;33mfn[m  [32m              file_info.clj:   69[m
+                                                    [33mring.middleware.reload/wrap-reload/[1;33mfn[m  [32m                 reload.clj:   22[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-log/[1;33mfn[m  [32m             stacktrace.clj:   23[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-web/[1;33mfn[m  [32m             stacktrace.clj:   86[m
+                                                      [33mring.adapter.jetty/proxy-handler/[1;33mfn[m  [32m                  jetty.clj:   24[m
+[37mring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle[m  [32m                                 [m
+                                   [37morg.eclipse.jetty.server.handler.HandlerWrapper.handle[m  [32m        HandlerWrapper.java:   97[m
+                                                   [37morg.eclipse.jetty.server.Server.handle[m  [32m                Server.java:  497[m
+                                              [37morg.eclipse.jetty.server.HttpChannel.handle[m  [32m           HttpChannel.java:  310[m
+                                       [37morg.eclipse.jetty.server.HttpConnection.onFillable[m  [32m        HttpConnection.java:  257[m
+                                            [37morg.eclipse.jetty.io.AbstractConnection$2.run[m  [32m    AbstractConnection.java:  540[m
+                                    [37morg.eclipse.jetty.util.thread.QueuedThreadPool.runJob[m  [32m      QueuedThreadPool.java:  635[m
+                                     [37morg.eclipse.jetty.util.thread.QueuedThreadPool$3.run[m  [32m      QueuedThreadPool.java:  555[m
+                                                                     [37mjava.lang.Thread.run[m  [32m                Thread.java:  745[m
+
+2015-Aug-07 08:46:54 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:46:54 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:48:56 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:49:11 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:49:11 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:49:28 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:49:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:49:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:50:29 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:50:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:50:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:50:45 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:50:58 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:50:58 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:51:52 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:52:01 +0200 SveriCaroLaptop ERROR [de.sveri.mct.middleware] - {:error #error {
+ :cause Wrong number of args (4) passed to: question/update
+ :via
+ [{:type clojure.lang.ArityException
+   :message Wrong number of args (4) passed to: question/update
+   :at [clojure.lang.AFn throwArity AFn.java 429]}]
+ :trace
+ [[clojure.lang.AFn throwArity AFn.java 429]
+  [clojure.lang.AFn invoke AFn.java 44]
+  [de.sveri.mct.routes.question$question_routes$fn__22704 invoke question.clj 75]
+  [compojure.core$make_route$fn__7104 invoke core.clj 130]
+  [compojure.core$wrap_route_middleware$fn__7100 invoke core.clj 118]
+  [compojure.core$if_route$fn__7072 invoke core.clj 41]
+  [compojure.core$if_method$fn__7064 invoke core.clj 27]
+  [compojure.core$routing$fn__7111 invoke core.clj 144]
+  [clojure.core$some invoke core.clj 2570]
+  [compojure.core$routing doInvoke core.clj 144]
+  [clojure.lang.RestFn applyTo RestFn.java 139]
+  [clojure.core$apply invoke core.clj 632]
+  [compojure.core$routes$fn__7115 invoke core.clj 149]
+  [compojure.core$routing$fn__7111 invoke core.clj 144]
+  [clojure.core$some invoke core.clj 2570]
+  [compojure.core$routing doInvoke core.clj 144]
+  [clojure.lang.RestFn applyTo RestFn.java 139]
+  [clojure.core$apply invoke core.clj 632]
+  [compojure.core$routes$fn__7115 invoke core.clj 149]
+  [de.sveri.mct.middleware$add_req_properties$fn__11742 invoke middleware.clj 27]
+  [buddy.auth.accessrules$wrap_access_rules$fn__11636 invoke accessrules.clj 347]
+  [buddy.auth.middleware$wrap_authorization$fn__11663 invoke middleware.clj 81]
+  [noir_exception.core$wrap_internal_error$fn__11500 invoke core.clj 150]
+  [taoensso.tower.ring$wrap_tower$fn__11684 invoke ring.clj 53]
+  [ring.middleware.anti_forgery$wrap_anti_forgery$fn__5497 invoke anti_forgery.clj 90]
+  [de.sveri.clojure.commons.middleware.util$wrap_trimmings$fn__11714 invoke util.clj 16]
+  [selmer.middleware$wrap_error_page$fn__10563 invoke middleware.clj 9]
+  [prone.middleware$wrap_exceptions$fn__10728 invoke middleware.clj 81]
+  [clojure_miniprofiler$run_handler_profiled$fn__9733 invoke clojure_miniprofiler.clj 382]
+  [clojure_miniprofiler$run_handler_profiled invoke clojure_miniprofiler.clj 382]
+  [clojure_miniprofiler$wrap_miniprofiler$fn__9744 invoke clojure_miniprofiler.clj 429]
+  [noir.util.middleware$wrap_request_map$fn__12689 invoke middleware.clj 39]
+  [ring.middleware.keyword_params$wrap_keyword_params$fn__8293 invoke keyword_params.clj 35]
+  [ring.middleware.nested_params$wrap_nested_params$fn__8343 invoke nested_params.clj 84]
+  [ring.middleware.multipart_params$wrap_multipart_params$fn__11981 invoke multipart_params.clj 117]
+  [ring.middleware.params$wrap_params$fn__8259 invoke params.clj 64]
+  [ring.middleware.cookies$wrap_cookies$fn__4319 invoke cookies.clj 161]
+  [ring.middleware.absolute_redirects$wrap_absolute_redirects$fn__12089 invoke absolute_redirects.clj 36]
+  [ring.middleware.resource$wrap_resource$fn__12017 invoke resource.clj 28]
+  [ring.middleware.content_type$wrap_content_type$fn__8156 invoke content_type.clj 30]
+  [ring.middleware.not_modified$wrap_not_modified$fn__12067 invoke not_modified.clj 52]
+  [ring.middleware.x_headers$wrap_xss_protection$fn__11907 invoke x_headers.clj 71]
+  [ring.middleware.x_headers$wrap_frame_options$fn__11897 invoke x_headers.clj 38]
+  [ring.middleware.x_headers$wrap_content_type_options$fn__11902 invoke x_headers.clj 53]
+  [hiccup.middleware$wrap_base_url$fn__12161 invoke middleware.clj 12]
+  [ring.middleware.format_params$wrap_format_params$fn__12482 invoke format_params.clj 113]
+  [ring.middleware.format_params$wrap_format_params$fn__12482 invoke format_params.clj 113]
+  [ring.middleware.format_params$wrap_format_params$fn__12482 invoke format_params.clj 113]
+  [ring.middleware.format_response$wrap_format_response$fn__12611 invoke format_response.clj 174]
+  [noir.validation$wrap_noir_validation$fn__8131 invoke validation.clj 155]
+  [noir.cookies$noir_cookies$fn__12211 invoke cookies.clj 72]
+  [ring.middleware.cookies$wrap_cookies$fn__4319 invoke cookies.clj 161]
+  [noir.session$noir_flash$fn__4535 invoke session.clj 158]
+  [ring.middleware.flash$wrap_flash$fn__4460 invoke flash.clj 35]
+  [noir.session$noir_session$fn__4521 invoke session.clj 109]
+  [ring.middleware.session_timeout$wrap_idle_session_timeout$fn__4477 invoke session_timeout.clj 25]
+  [ring.middleware.session$wrap_session$fn__4440 invoke session.clj 102]
+  [ring.middleware.file$wrap_file$fn__12038 invoke file.clj 44]
+  [ring.middleware.file_info$wrap_file_info$fn__8185 invoke file_info.clj 69]
+  [ring.middleware.reload$wrap_reload$fn__15047 invoke reload.clj 22]
+  [ring.middleware.stacktrace$wrap_stacktrace_log$fn__14857 invoke stacktrace.clj 23]
+  [ring.middleware.stacktrace$wrap_stacktrace_web$fn__14919 invoke stacktrace.clj 86]
+  [ring.adapter.jetty$proxy_handler$fn__14723 invoke jetty.clj 24]
+  [ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a handle nil -1]
+  [org.eclipse.jetty.server.handler.HandlerWrapper handle HandlerWrapper.java 97]
+  [org.eclipse.jetty.server.Server handle Server.java 497]
+  [org.eclipse.jetty.server.HttpChannel handle HttpChannel.java 310]
+  [org.eclipse.jetty.server.HttpConnection onFillable HttpConnection.java 257]
+  [org.eclipse.jetty.io.AbstractConnection$2 run AbstractConnection.java 540]
+  [org.eclipse.jetty.util.thread.QueuedThreadPool runJob QueuedThreadPool.java 635]
+  [org.eclipse.jetty.util.thread.QueuedThreadPool$3 run QueuedThreadPool.java 555]
+  [java.lang.Thread run Thread.java 745]]}, :request {:jvm-locales [:de :en-US :en :de-DE], :ssl-client-cert nil, :protocol HTTP/1.1, :locale :de, :cookies {ring-session {:value d001e3a2-92f8-4a02-936d-2c265e22fc47}}, :remote-addr 0:0:0:0:0:0:0:1, :jvm-locale :de, :t' #object[clojure.core$partial$fn__4527 0x60e4b78 clojure.core$partial$fn__4527@60e4b78], :params {:answer_8 , :answer_correct_3 on, :answer_7 a7, :answer_3 q2 answer 3, :answer_6 , :answer_uuid_3 , :question question 2quest changed, :answer_uuid_2 , :answer_5 a5, :answer_9 , :topic_id e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb, :answer_2 q2 answer 2, :id e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb, :answer_4 q2 answer 4, :answer_uuid_0 , :answer_correct_2 on, :answer_1 q2 answer 1
+            a1 changed, :answer_uuid_1 , :answer_10 , :__anti-forgery-token XKJD6+OQ4kwRsrOsddtLjDdbpSRTspQp0XWiwg88UQda574uoiUzwM3udRhbu3V1t4qvVd5HxdwJhUal}, :flash nil, :headers {host localhost:3001, user-agent Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0, content-type application/x-www-form-urlencoded, cookie ring-session=d001e3a2-92f8-4a02-936d-2c265e22fc47, content-length 553, referer http://localhost:3001/question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb, connection keep-alive, accept text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8, accept-language de,en-US;q=0.7,en;q=0.3, accept-encoding gzip, deflate}, :server-port 3001, :content-length 553, :locales [:de :en-US :en :de-DE], :form-params {answer_7 a7, answer_1 q2 answer 1
+            a1 changed, answer_4 q2 answer 4, topic_id e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb, answer_uuid_0 , answer_10 , answer_uuid_1 , answer_8 , id e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb, answer_uuid_3 , answer_6 , answer_correct_3 on, question question 2quest changed, __anti-forgery-token XKJD6+OQ4kwRsrOsddtLjDdbpSRTspQp0XWiwg88UQda574uoiUzwM3udRhbu3V1t4qvVd5HxdwJhUal, answer_correct_2 on, answer_9 , answer_2 q2 answer 2, answer_5 a5, answer_uuid_2 , answer_3 q2 answer 3}, :session/key d001e3a2-92f8-4a02-936d-2c265e22fc47, :query-params {}, :content-type application/x-www-form-urlencoded, :character-encoding nil, :t #object[taoensso.tower$make_t_uncached$new_t__10337 0x38633012 taoensso.tower$make_t_uncached$new_t__10337@38633012], :uri /question/update, :server-name localhost, :query-string nil, :body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x63dd81e8 HttpInputOverHTTP@63dd81e8], :edn-params nil, :multipart-params {}, :scheme :http, :request-method :post, :session {:ring.middleware.anti-forgery/anti-forgery-token XKJD6+OQ4kwRsrOsddtLjDdbpSRTspQp0XWiwg88UQda574uoiUzwM3udRhbu3V1t4qvVd5HxdwJhUal, :ring.middleware.session-timeout/idle-timeout 1438932119, :noir {:registration-allowed? true, :captcha-enabled? false, :role none, :identity local@local.de}}, :tconfig {:fallback-locale :en, :dictionary {:en {:generic {:some_error Some error occured., :deletion_canceled Deletion canceled.}, :user {:deleted User deleted successfully., :captcha_wrong Please provide the correct captcha input., :pass_min_length Password must be at least 5 characters., :pass_changed Password changed., :updated User %s updated successfully., :user_added User added., :account_activated_title Account Activated, :pass_correct Please provide a correct password., :activate_account Please activate your account first., :account_activated Account activated, you can login now. Redirecting in five seconds..., :activationid_wrong Please provide a correct activation id., :account_created_title Account Created, :email_invalid A valid email is required., :email_failed Something went wrong sending the email, please contact us., :pass_match Entered passwords do not match., :username_wrong Please provide a correct username., :wrong_cur_pass Current password was incorrect., :username_exists This username already exists. Choose another., :signup_title Signup, :account_created Account creation successful. You will receive an email with an activation link. Please click on it to activate your account.}, :admin {:title User Overview}}}}}}
+2015-Aug-07 08:52:06 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:52:06 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:52:44 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:52:52 +0200 SveriCaroLaptop ERROR [de.sveri.mct.routes.question] - Something went wrong updating: e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb
+[1;31mjava.sql.SQLException[m: [3mNOT NULL constraint failed: question.rating[m
+    [1merrorCode[m: 0
+                                                               [37morg.sqlite.core.DB.throwex[m  [32m                   DB.java:  859[m
+                                                          [37morg.sqlite.core.DB.executeBatch[m  [32m                   DB.java:  760[m
+                                       [37morg.sqlite.core.CorePreparedStatement.executeBatch[m  [32mCorePreparedStatement.java:   77[m
+                                                          [33mclojure.java.jdbc/[1;33mexecute-batch[m  [32m                  jdbc.clj:  401[m
+                                    [33mclojure.java.jdbc/db-do-execute-prepared-statement/[1;33mfn[m  [32m                  jdbc.clj:  733[m
+                                                        [33mclojure.java.jdbc/[1;33mdb-transaction*[m  [32m                  jdbc.clj:  584[m
+                                                               [37mclojure.lang.RestFn.invoke[m  [32m               RestFn.java:  425[m
+                                       [33mclojure.java.jdbc/[1;33mdb-do-execute-prepared-statement[m  [32m                  jdbc.clj:  732[m
+                                                         [33mclojure.java.jdbc/[1;33mdb-do-prepared[m  [32m                  jdbc.clj:  753[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m               RestFn.java:  142[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                  core.clj:  636[m
+                                                         [33mclojure.java.jdbc/[1;33mdb-do-prepared[m  [32m                  jdbc.clj:  748[m
+                                                               [37mclojure.lang.RestFn.invoke[m  [32m               RestFn.java:  442[m
+                                                                        [33mkorma.db/[1;33mexec-sql[m  [32m                    db.clj:  263[m
+                                                                        [33mkorma.db/[1;33mdo-query[m  [32m                    db.clj:  277[m
+                                                                          [33mkorma.core/[1;33mexec[m  [32m                  core.clj:  498[m
+                                                 [33mde.sveri.mct.db.question/[1;33mupdate-question[m  [32m              question.clj:   25[m
+                                                   [33mde.sveri.mct.routes.question/update/[1;33mfn[m  [32m              question.clj:   53[m
+                                                      [33mde.sveri.mct.routes.question/[1;33mupdate[m  [32m              question.clj:   52[m
+                                          [33mde.sveri.mct.routes.question/question-routes/[1;33mfn[m  [32m              question.clj:   75[m
+                                                             [33mcompojure.core/make-route/[1;33mfn[m  [32m                  core.clj:  130[m
+                                                  [33mcompojure.core/wrap-route-middleware/[1;33mfn[m  [32m                  core.clj:  118[m
+                                                               [33mcompojure.core/if-route/[1;33mfn[m  [32m                  core.clj:   41[m
+                                                              [33mcompojure.core/if-method/[1;33mfn[m  [32m                  core.clj:   27[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                  core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                  core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                  core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m               RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                  core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                  core.clj:  149[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                  core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                  core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                  core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m               RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                  core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                  core.clj:  149[m
+                                            [33mde.sveri.mct.middleware/add-req-properties/[1;33mfn[m  [32m            middleware.clj:   27[m
+                                              [33mbuddy.auth.accessrules/wrap-access-rules/[1;33mfn[m  [32m           accessrules.clj:  347[m
+                                              [33mbuddy.auth.middleware/wrap-authorization/[1;33mfn[m  [32m            middleware.clj:   81[m
+                                               [33mnoir-exception.core/wrap-internal-error/[1;33mfn[m  [32m                  core.clj:  150[m
+                                                        [33mtaoensso.tower.ring/wrap-tower/[1;33mfn[m  [32m                  ring.clj:   53[m
+                                        [33mring.middleware.anti-forgery/wrap-anti-forgery/[1;33mfn[m  [32m          anti_forgery.clj:   90[m
+                               [33mde.sveri.clojure.commons.middleware.util/wrap-trimmings/[1;33mfn[m  [32m                  util.clj:   16[m
+                                                     [33mselmer.middleware/wrap-error-page/[1;33mfn[m  [32m            middleware.clj:    9[m
+                                                      [33mprone.middleware/wrap-exceptions/[1;33mfn[m  [32m            middleware.clj:   81[m
+                                             [33mclojure-miniprofiler/run-handler-profiled/[1;33mfn[m  [32m  clojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/[1;33mrun-handler-profiled[m  [32m  clojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/wrap-miniprofiler/[1;33mfn[m  [32m  clojure_miniprofiler.clj:  429[m
+                                                 [33mnoir.util.middleware/wrap-request-map/[1;33mfn[m  [32m            middleware.clj:   39[m
+                                    [33mring.middleware.keyword-params/wrap-keyword-params/[1;33mfn[m  [32m        keyword_params.clj:   35[m
+                                      [33mring.middleware.nested-params/wrap-nested-params/[1;33mfn[m  [32m         nested_params.clj:   84[m
+                                [33mring.middleware.multipart-params/wrap-multipart-params/[1;33mfn[m  [32m      multipart_params.clj:  117[m
+                                                    [33mring.middleware.params/wrap-params/[1;33mfn[m  [32m                params.clj:   64[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m               cookies.clj:  161[m
+                            [33mring.middleware.absolute-redirects/wrap-absolute-redirects/[1;33mfn[m  [32m    absolute_redirects.clj:   36[m
+                                                [33mring.middleware.resource/wrap-resource/[1;33mfn[m  [32m              resource.clj:   28[m
+                                        [33mring.middleware.content-type/wrap-content-type/[1;33mfn[m  [32m          content_type.clj:   30[m
+                                        [33mring.middleware.not-modified/wrap-not-modified/[1;33mfn[m  [32m          not_modified.clj:   52[m
+                                         [33mring.middleware.x-headers/wrap-xss-protection/[1;33mfn[m  [32m             x_headers.clj:   71[m
+                                          [33mring.middleware.x-headers/wrap-frame-options/[1;33mfn[m  [32m             x_headers.clj:   38[m
+                                   [33mring.middleware.x-headers/wrap-content-type-options/[1;33mfn[m  [32m             x_headers.clj:   53[m
+                                                       [33mhiccup.middleware/wrap-base-url/[1;33mfn[m  [32m            middleware.clj:   12[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m         format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m         format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m         format_params.clj:  113[m
+                                  [33mring.middleware.format-response/wrap-format-response/[1;33mfn[m  [32m       format_response.clj:  174[m
+                                                  [33mnoir.validation/wrap-noir-validation/[1;33mfn[m  [32m            validation.clj:  155[m
+                                                             [33mnoir.cookies/noir-cookies/[1;33mfn[m  [32m               cookies.clj:   72[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m               cookies.clj:  161[m
+                                                               [33mnoir.session/noir-flash/[1;33mfn[m  [32m               session.clj:  158[m
+                                                      [33mring.middleware.flash/wrap-flash/[1;33mfn[m  [32m                 flash.clj:   35[m
+                                                             [33mnoir.session/noir-session/[1;33mfn[m  [32m               session.clj:  109[m
+                             [33mring.middleware.session-timeout/wrap-idle-session-timeout/[1;33mfn[m  [32m       session_timeout.clj:   25[m
+                                                  [33mring.middleware.session/wrap-session/[1;33mfn[m  [32m               session.clj:  102[m
+                                                        [33mring.middleware.file/wrap-file/[1;33mfn[m  [32m                  file.clj:   44[m
+                                              [33mring.middleware.file-info/wrap-file-info/[1;33mfn[m  [32m             file_info.clj:   69[m
+                                                    [33mring.middleware.reload/wrap-reload/[1;33mfn[m  [32m                reload.clj:   22[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-log/[1;33mfn[m  [32m            stacktrace.clj:   23[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-web/[1;33mfn[m  [32m            stacktrace.clj:   86[m
+                                                      [33mring.adapter.jetty/proxy-handler/[1;33mfn[m  [32m                 jetty.clj:   24[m
+[37mring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle[m  [32m                                [m
+                                   [37morg.eclipse.jetty.server.handler.HandlerWrapper.handle[m  [32m       HandlerWrapper.java:   97[m
+                                                   [37morg.eclipse.jetty.server.Server.handle[m  [32m               Server.java:  497[m
+                                              [37morg.eclipse.jetty.server.HttpChannel.handle[m  [32m          HttpChannel.java:  310[m
+                                       [37morg.eclipse.jetty.server.HttpConnection.onFillable[m  [32m       HttpConnection.java:  257[m
+                                            [37morg.eclipse.jetty.io.AbstractConnection$2.run[m  [32m   AbstractConnection.java:  540[m
+                                    [37morg.eclipse.jetty.util.thread.QueuedThreadPool.runJob[m  [32m     QueuedThreadPool.java:  635[m
+                                     [37morg.eclipse.jetty.util.thread.QueuedThreadPool$3.run[m  [32m     QueuedThreadPool.java:  555[m
+                                                                     [37mjava.lang.Thread.run[m  [32m               Thread.java:  745[m
+
+2015-Aug-07 08:52:58 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:52:58 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:53:36 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:53:49 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:53:49 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:54:46 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:54:58 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:54:58 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:55:06 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:55:24 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:55:24 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:56:32 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:56:46 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:56:46 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:57:50 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:58:06 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:58:06 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 08:58:54 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 08:59:08 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 08:59:08 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:00:24 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:00:31 +0200 SveriCaroLaptop ERROR [de.sveri.mct.routes.question] - Something went wrong updating: e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba6cb
+[1;31mclojure.lang.ArityException[m: [3mWrong number of args (1) passed to: answer/update-answer[m
+                                                              [37mclojure.lang.AFn.throwArity[m  [32m                AFn.java:  429[m
+                                                                  [37mclojure.lang.AFn.invoke[m  [32m                AFn.java:   32[m
+                                                   [33mde.sveri.mct.routes.question/update/[1;33mfn[m  [32m            question.clj:   53[m
+                                                      [33mde.sveri.mct.routes.question/[1;33mupdate[m  [32m            question.clj:   51[m
+                                          [33mde.sveri.mct.routes.question/question-routes/[1;33mfn[m  [32m            question.clj:   76[m
+                                                             [33mcompojure.core/make-route/[1;33mfn[m  [32m                core.clj:  130[m
+                                                  [33mcompojure.core/wrap-route-middleware/[1;33mfn[m  [32m                core.clj:  118[m
+                                                               [33mcompojure.core/if-route/[1;33mfn[m  [32m                core.clj:   41[m
+                                                              [33mcompojure.core/if-method/[1;33mfn[m  [32m                core.clj:   27[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m             RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                core.clj:  149[m
+                                                                [33mcompojure.core/routing/[1;33mfn[m  [32m                core.clj:  144[m
+                                                                        [33mclojure.core/[1;33msome[m  [32m                core.clj: 2570[m
+                                                                   [33mcompojure.core/[1;33mrouting[m  [32m                core.clj:  144[m
+                                                              [37mclojure.lang.RestFn.applyTo[m  [32m             RestFn.java:  139[m
+                                                                       [33mclojure.core/[1;33mapply[m  [32m                core.clj:  632[m
+                                                                 [33mcompojure.core/routes/[1;33mfn[m  [32m                core.clj:  149[m
+                                            [33mde.sveri.mct.middleware/add-req-properties/[1;33mfn[m  [32m          middleware.clj:   27[m
+                                              [33mbuddy.auth.accessrules/wrap-access-rules/[1;33mfn[m  [32m         accessrules.clj:  347[m
+                                              [33mbuddy.auth.middleware/wrap-authorization/[1;33mfn[m  [32m          middleware.clj:   81[m
+                                               [33mnoir-exception.core/wrap-internal-error/[1;33mfn[m  [32m                core.clj:  150[m
+                                                        [33mtaoensso.tower.ring/wrap-tower/[1;33mfn[m  [32m                ring.clj:   53[m
+                                        [33mring.middleware.anti-forgery/wrap-anti-forgery/[1;33mfn[m  [32m        anti_forgery.clj:   90[m
+                               [33mde.sveri.clojure.commons.middleware.util/wrap-trimmings/[1;33mfn[m  [32m                util.clj:   16[m
+                                                     [33mselmer.middleware/wrap-error-page/[1;33mfn[m  [32m          middleware.clj:    9[m
+                                                      [33mprone.middleware/wrap-exceptions/[1;33mfn[m  [32m          middleware.clj:   81[m
+                                             [33mclojure-miniprofiler/run-handler-profiled/[1;33mfn[m  [32mclojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/[1;33mrun-handler-profiled[m  [32mclojure_miniprofiler.clj:  382[m
+                                                [33mclojure-miniprofiler/wrap-miniprofiler/[1;33mfn[m  [32mclojure_miniprofiler.clj:  429[m
+                                                 [33mnoir.util.middleware/wrap-request-map/[1;33mfn[m  [32m          middleware.clj:   39[m
+                                    [33mring.middleware.keyword-params/wrap-keyword-params/[1;33mfn[m  [32m      keyword_params.clj:   35[m
+                                      [33mring.middleware.nested-params/wrap-nested-params/[1;33mfn[m  [32m       nested_params.clj:   84[m
+                                [33mring.middleware.multipart-params/wrap-multipart-params/[1;33mfn[m  [32m    multipart_params.clj:  117[m
+                                                    [33mring.middleware.params/wrap-params/[1;33mfn[m  [32m              params.clj:   64[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m             cookies.clj:  161[m
+                            [33mring.middleware.absolute-redirects/wrap-absolute-redirects/[1;33mfn[m  [32m  absolute_redirects.clj:   36[m
+                                                [33mring.middleware.resource/wrap-resource/[1;33mfn[m  [32m            resource.clj:   28[m
+                                        [33mring.middleware.content-type/wrap-content-type/[1;33mfn[m  [32m        content_type.clj:   30[m
+                                        [33mring.middleware.not-modified/wrap-not-modified/[1;33mfn[m  [32m        not_modified.clj:   52[m
+                                         [33mring.middleware.x-headers/wrap-xss-protection/[1;33mfn[m  [32m           x_headers.clj:   71[m
+                                          [33mring.middleware.x-headers/wrap-frame-options/[1;33mfn[m  [32m           x_headers.clj:   38[m
+                                   [33mring.middleware.x-headers/wrap-content-type-options/[1;33mfn[m  [32m           x_headers.clj:   53[m
+                                                       [33mhiccup.middleware/wrap-base-url/[1;33mfn[m  [32m          middleware.clj:   12[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m       format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m       format_params.clj:  113[m
+                                      [33mring.middleware.format-params/wrap-format-params/[1;33mfn[m  [32m       format_params.clj:  113[m
+                                  [33mring.middleware.format-response/wrap-format-response/[1;33mfn[m  [32m     format_response.clj:  174[m
+                                                  [33mnoir.validation/wrap-noir-validation/[1;33mfn[m  [32m          validation.clj:  155[m
+                                                             [33mnoir.cookies/noir-cookies/[1;33mfn[m  [32m             cookies.clj:   72[m
+                                                  [33mring.middleware.cookies/wrap-cookies/[1;33mfn[m  [32m             cookies.clj:  161[m
+                                                               [33mnoir.session/noir-flash/[1;33mfn[m  [32m             session.clj:  158[m
+                                                      [33mring.middleware.flash/wrap-flash/[1;33mfn[m  [32m               flash.clj:   35[m
+                                                             [33mnoir.session/noir-session/[1;33mfn[m  [32m             session.clj:  109[m
+                             [33mring.middleware.session-timeout/wrap-idle-session-timeout/[1;33mfn[m  [32m     session_timeout.clj:   25[m
+                                                  [33mring.middleware.session/wrap-session/[1;33mfn[m  [32m             session.clj:  102[m
+                                                        [33mring.middleware.file/wrap-file/[1;33mfn[m  [32m                file.clj:   44[m
+                                              [33mring.middleware.file-info/wrap-file-info/[1;33mfn[m  [32m           file_info.clj:   69[m
+                                                    [33mring.middleware.reload/wrap-reload/[1;33mfn[m  [32m              reload.clj:   22[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-log/[1;33mfn[m  [32m          stacktrace.clj:   23[m
+                                        [33mring.middleware.stacktrace/wrap-stacktrace-web/[1;33mfn[m  [32m          stacktrace.clj:   86[m
+                                                      [33mring.adapter.jetty/proxy-handler/[1;33mfn[m  [32m               jetty.clj:   24[m
+[37mring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle[m  [32m                              [m
+                                   [37morg.eclipse.jetty.server.handler.HandlerWrapper.handle[m  [32m     HandlerWrapper.java:   97[m
+                                                   [37morg.eclipse.jetty.server.Server.handle[m  [32m             Server.java:  497[m
+                                              [37morg.eclipse.jetty.server.HttpChannel.handle[m  [32m        HttpChannel.java:  310[m
+                                       [37morg.eclipse.jetty.server.HttpConnection.onFillable[m  [32m     HttpConnection.java:  257[m
+                                            [37morg.eclipse.jetty.io.AbstractConnection$2.run[m  [32m AbstractConnection.java:  540[m
+                                    [37morg.eclipse.jetty.util.thread.QueuedThreadPool.runJob[m  [32m   QueuedThreadPool.java:  635[m
+                                     [37morg.eclipse.jetty.util.thread.QueuedThreadPool$3.run[m  [32m   QueuedThreadPool.java:  555[m
+                                                                     [37mjava.lang.Thread.run[m  [32m             Thread.java:  745[m
+
+2015-Aug-07 09:00:33 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:00:33 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:01:14 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:01:29 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:01:29 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:03:30 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:03:44 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:03:44 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:06:23 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:06:38 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:06:38 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:07:16 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:07:32 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:07:32 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:11:21 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:11:43 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:11:43 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:28:02 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:28:09 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:28:09 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 09:28:27 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 09:28:34 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 09:28:34 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 10:03:07 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 10:03:15 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 10:03:15 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 10:03:19 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 10:03:26 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 10:03:26 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 10:03:31 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 10:03:45 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 10:03:45 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!

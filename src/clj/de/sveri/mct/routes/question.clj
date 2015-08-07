@@ -36,8 +36,7 @@
 
 
 
-(defn create [{:keys [params] :as req}]
-  ;(clojure.pprint/pprint req)
+(defn create [{:keys [params]}]
   (try
     (let [quest-map (params->quest params)
           q-id (db/create-question quest-map)
@@ -48,9 +47,11 @@
                        (layout/flash-result (str "An error occured.") "alert-danger")))
   (resp/redirect "/question"))
 
-(defn update [id user_id topic_id question rating rate_count]
+(defn update [{:keys [id topic_id question] :as params}]
   (try
-    (db/update-question id {:user_id user_id :topic_id topic_id :question question :rating rating :rate_count rate_count})
+  (doseq [answer (q-service/params->answers id params 10)]
+    (db-a/create-or-update answer))
+    (db/update-question id {:topic_id topic_id :question question})
     (catch Exception e (timb/error e (str "Something went wrong updating: " id))
                        (layout/flash-result (str "An error occured.") "alert-danger")))
   (resp/redirect "/question"))
@@ -72,4 +73,4 @@
     ;(POST "/question/create" req (create topic_id question rating rate_count ))
     (GET "/question/delete/:id" [id] (delete-page id))
     (POST "/question/delete" [id delete_cancel] (delete id delete_cancel))
-    (POST "/question/update" [id user_id topic_id question rating rate_count] (update id user_id topic_id question rating rate_count))))
+    (POST "/question/update" req (update (:params req)))))
