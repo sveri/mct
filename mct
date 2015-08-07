@@ -3106,3 +3106,71 @@
 -=[ mct started successfully using the development profile ]=-
 2015-Aug-07 16:15:48 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
 2015-Aug-07 16:15:48 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:19:41 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:19:54 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:19:54 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:19:54 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:19:57 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:19:57 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:19:57 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:19:59 +0200 SveriCaroLaptop INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-07 16:19:59 +0200 SveriCaroLaptop INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-07 16:20:00 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:00 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:00 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:05 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:05 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:22 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:31 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:31 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:31 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:34 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:34 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:34 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:36 +0200 SveriCaroLaptop INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-07 16:20:36 +0200 SveriCaroLaptop INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-07 16:20:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:37 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:42 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:42 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:20:42 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:20:43 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:20:43 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:22:03 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-07 16:22:25 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-07 16:22:26 +0200 SveriCaroLaptop INFO [de.sveri.mct.components.server] - shutdown complete!

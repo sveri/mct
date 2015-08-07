@@ -14,5 +14,5 @@
 
 (deftest params->answers-test
   (is (= (q/params->answers q-uuid params 3)
-         [{:question_id q-uuid :answer "a1" :correct true}
-          {:question_id q-uuid :answer "a2" :correct false}])))
+         [{:question_id q-uuid :answer "a1" :correct true :id nil}
+          {:question_id q-uuid :answer "a2" :correct false :id nil}])))

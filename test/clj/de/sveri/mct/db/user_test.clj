@@ -29,4 +29,4 @@
 (deftest get-all-users
   (u/create-user "email" "pw" "id")
   (let [users (u/get-all-users)]
-    (is (= 2 (count users)))))
+    (is (= 3 (count users)))))
