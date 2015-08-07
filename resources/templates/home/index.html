@@ -9,17 +9,38 @@
 <div>
 
     <form action="/index/select_topic" class="form" method="post">
+        <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
         <div class="form-group">
             <label for="topic_id">Select a Topic</label>
             <select id="topic_id" name="topic_id" class="form-control">
                 <option value="none">Random</option>
                 {% for topic in topics %}
-                    <option value="{{topic.id}}">{{topic.name}}</option>
+                <option value="{{topic.id}}">{{topic.name}}</option>
                 {% endfor %}
             </select>
         </div>
 
         <button class="btn btn-primary" type="submit">Go</button>
+    </form>
+
+    <br>
+    <br>
+
+    <form action="/index/answer_question" class="form" method="post">
+        <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
+
+        <p><b>{{question.question}}:</b></p>
+
+        {% for answer in question.answer %}
+
+            {{answer.answer}}
+            <input type="checkbox" name="answer_correct_{{forloop.counter}}">
+
+            <br>
+        {% endfor %}
+
+
+        <button class="btn btn-primary" type="submit">Next</button>
     </form>
 
 </div>
