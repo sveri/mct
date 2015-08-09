@@ -10,7 +10,8 @@
 ;(defn get-answer-by-uuid [uuid] (first (select answer (where {:id uuid}) (limit 1))))
 
 (defn create-answer [data]
-  (insert answer (values (merge data {:id (str (UUID/randomUUID))}))))
+  (let [id (if (:id data) (:id data) (str (UUID/randomUUID)))]
+    (insert answer (values (merge data {:id id})))))
 
 (defn update-answer [id fields]
   (update answer (set-fields fields) (where {:id id})))
