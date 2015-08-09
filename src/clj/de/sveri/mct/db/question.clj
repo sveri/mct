@@ -19,7 +19,8 @@
                                              (limit 1))))
 
 (defn create-question [data]
-  (let [id (str (UUID/randomUUID))]
+  (let [id (if (:id data) (:id data) (str (UUID/randomUUID)))]
+    (clojure.pprint/pprint data)
     (insert question (values (merge data {:id id})))
     id))
 

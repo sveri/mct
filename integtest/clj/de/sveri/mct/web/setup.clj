@@ -50,7 +50,8 @@ Your Team"
   (j/reset-db
     {:db       {:type :sql,
                 :url  db-uri}
-     :migrator migrators})
+     :migrator migrators
+     :seed "joplin.seeds/run"})
   (w/set-driver! {:browser browser}))
 
 (defn stop-browser []
@@ -69,7 +70,7 @@ Your Team"
   (stop-server))
 
 (defn browser-setup [f]
-  (start-browser :htmlunit)
+  (start-browser :firefox)
   (f)
   (stop-browser))
 
