@@ -29,7 +29,8 @@
 (defn delete-question [id] (delete question (where {:id id})))
 
 (defn get-random-question [topic_id]
-  (let [qs (select question (where {:topic_id topic_id})
-                   (with answer ))
+  (let [qs (select question
+                   (where (if (= "Random" topic_id) {} {:topic_id topic_id}))
+                   (with answer))
         n (rand-int (count qs))]
     (nth qs n)))
