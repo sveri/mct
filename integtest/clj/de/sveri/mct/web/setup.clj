@@ -51,7 +51,7 @@ Your Team"
     {:db       {:type :sql,
                 :url  db-uri}
      :migrator migrators
-     :seed "joplin.seeds/run"})
+     :seed "joplin.seeds/clojure"})
   (w/set-driver! {:browser browser}))
 
 (defn stop-browser []

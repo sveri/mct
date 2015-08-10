@@ -131,7 +131,8 @@
 
                        :joplin {:databases {:sqlite-dev {:type :sql, :url "jdbc:sqlite:./db/mct.sqlite"}
                                             :h2-dev {:type :sql, :url "jdbc:h2:./db/korma.db;DATABASE_TO_UPPER=FALSE"}}
-                                :environments {:sqlite-dev-env [{:db :sqlite-dev, :migrator :sqlite-mig}]
+                                :seeds {:clojure "joplin.seeds/clojure"}
+                                :environments {:sqlite-dev-env [{:db :sqlite-dev, :migrator :sqlite-mig :seeds :clojure}]
                                                :h2-dev-env [{:db :h2-dev, :migrator :h2-mig}]}}}
 
              :uberjar {:auto-clean false                    ; not sure about this one

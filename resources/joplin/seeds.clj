@@ -29,7 +29,7 @@
               {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba5cb" :answer "Clojure the Compiler" :correct 1}
               {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba5cb" :answer "Clojure the Framework" :correct 0}])
 
-(defn run [target & args]
+(defn clojure [target & args]
   (dorun (map q/create-question questions))
   (dorun (map a/create-answer answers))
 
