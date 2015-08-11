@@ -4444,3 +4444,79 @@
 -=[ mct started successfully using the development profile ]=-
 2015-Aug-11 18:21:11 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
 2015-Aug-11 18:21:11 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:22:30 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:23:41 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:23:41 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:23:41 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:23:48 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:23:48 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:23:48 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:24:22 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:24:22 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:24:22 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:24:39 +0200 sveri-PC INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-11 18:24:45 +0200 sveri-PC INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-11 18:24:59 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:25:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:25:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:26:23 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:27:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:27:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:27:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:28:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:28:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:28:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:28:35 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:28:35 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:28:35 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:28:54 +0200 sveri-PC INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-11 18:29:01 +0200 sveri-PC INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-11 18:29:15 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:29:15 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:29:15 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:29:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:29:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:29:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 18:30:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:30:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 18:30:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 18:30:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:46:32 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 19:46:50 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:46:50 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:46:50 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 19:46:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:46:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:46:51 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 19:46:58 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:46:58 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:46:58 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 19:47:02 +0200 sveri-PC INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-11 19:47:04 +0200 sveri-PC INFO [de.sveri.mct.service.user] - sent activation email to:  foo@bar.de
+2015-Aug-11 19:47:07 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:47:07 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:47:07 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 19:47:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:47:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:47:14 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-11 19:47:18 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:47:18 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-11 19:47:18 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-11 19:47:18 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
