@@ -2,7 +2,7 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+            :url  "http://www.eclipse.org/legal/epl-v10.html"}
 
   :source-paths ["src/clj" "src/cljs" "src/cljc"]
 
@@ -60,17 +60,13 @@
   :plugins [[de.sveri/closp-crud "0.1.3"]
             [lein-cljsbuild "1.0.5"]]
 
-  ;database migrations
-  :joplin {:migrators {:sqlite-mig "resources/migrators/sqlite"
-                       :h2-mig "resources/migrators/h2"}}
-
-  :closp-crud {:jdbc-url "jdbc:sqlite:./db/mct.sqlite"
+  :closp-crud {:jdbc-url               "jdbc:sqlite:./db/mct.sqlite"
                :migrations-output-path "./resources/migrators/sqlite"
-               :clj-src "src/clj"
-               :ns-db "de.sveri.mct.db"
-               :ns-routes "de.sveri.mct.routes"
-               :ns-layout "de.sveri.mct.layout"
-               :templates "resources/templates"}
+               :clj-src                "src/clj"
+               :ns-db                  "de.sveri.mct.db"
+               :ns-routes              "de.sveri.mct.routes"
+               :ns-layout              "de.sveri.mct.layout"
+               :templates              "resources/templates"}
 
   :min-lein-version "2.5.0"
 
@@ -81,16 +77,16 @@
 
   :cljsbuild
   {:builds {:dev {:source-paths ["src/cljs" "src/cljc" "env/dev/cljs"]
-                  :figwheel {:css-dirs ["resources/public/css"]             ;; watch and update CSS
-                             :on-jsload "mct.dev/main  "}
-                  :compiler     {:main           "mct.dev"
-                                 :asset-path     "/js/compiled/out"
-                                 :output-to      "resources/public/js/compiled/app.js"
-                                 :output-dir     "resources/public/js/compiled/out"
-                                 :source-map     "resources/public/js/compiled/out.js.map"
-                                 :optimizations  :none
-                                 :cache-analysis true
-                                 :pretty-print   true
+                  :figwheel     {:css-dirs  ["resources/public/css"] ;; watch and update CSS
+                                 :on-jsload "mct.dev/main  "}
+                  :compiler     {:main                 "mct.dev"
+                                 :asset-path           "/js/compiled/out"
+                                 :output-to            "resources/public/js/compiled/app.js"
+                                 :output-dir           "resources/public/js/compiled/out"
+                                 :source-map           "resources/public/js/compiled/out.js.map"
+                                 :optimizations        :none
+                                 :cache-analysis       true
+                                 :pretty-print         true
                                  :source-map-timestamp true}}
             :adv {:source-paths ["src/cljs" "src/cljc"]
                   :compiler     {:output-to     "resources/public/js/compiled/app.js"
@@ -99,7 +95,7 @@
                                  :optimizations :advanced
                                  :pretty-print  false}}}}
 
-  :profiles {:dev     {:repl-options {:init-ns          de.sveri.mct.user}
+  :profiles {:dev     {:repl-options {:init-ns de.sveri.mct.user}
 
                        :plugins      [[lein-ring "0.9.0"]
                                       [lein-figwheel "0.3.3"]
@@ -129,23 +125,26 @@
                        :injections   [(require 'pjstadig.humane-test-output)
                                       (pjstadig.humane-test-output/activate!)]
 
-                       :joplin {:databases {:sqlite-dev {:type :sql, :url "jdbc:sqlite:./db/mct.sqlite"}
-                                            :h2-dev {:type :sql, :url "jdbc:h2:./db/korma.db;DATABASE_TO_UPPER=FALSE"}}
-                                :seeds {:clojure "joplin.seeds/clojure"}
-                                :environments {:sqlite-dev-env [{:db :sqlite-dev, :migrator :sqlite-mig :seeds :clojure}]
-                                               :h2-dev-env [{:db :h2-dev, :migrator :h2-mig}]}}}
+                       :joplin       {:migrators {:sqlite-mig "resources/migrators/sqlite"
+                                                  :h2-mig     "resources/migrators/h2"}
+                                      :databases    {:sqlite-dev {:type :sql, :url "jdbc:sqlite:./db/mct.sqlite"}
+                                                     :h2-dev     {:type :sql, :url "jdbc:h2:./db/korma.db;DATABASE_TO_UPPER=FALSE"}}
+                                      :seeds        {:clojure "joplin.seeds/clojure-quest"}
+                                      :environments {:sqlite-dev-env [{:db :sqlite-dev, :migrator :sqlite-mig
+                                                                       :seed :clojure}]
+                                                     :h2-dev-env     [{:db :h2-dev, :migrator :h2-mig}]}}}
 
-             :uberjar {:auto-clean false                    ; not sure about this one
+             :uberjar {:auto-clean  false                   ; not sure about this one
                        :omit-source true
                        :aot         :all}}
 
   :test-paths ["test/clj" "integtest/clj"]
 
-  :test-selectors {:unit (complement :integration)
+  :test-selectors {:unit        (complement :integration)
                    :integration :integration
-                   :cur :cur                                ; one more selector for, give it freely to run only
-                                                            ; the ones you need currently
-                   :all (constantly true)}
+                   :cur         :cur                        ; one more selector for, give it freely to run only
+                   ; the ones you need currently
+                   :all         (constantly true)}
 
   :test2junit-output-dir "test-results"
 
@@ -154,5 +153,5 @@
   :uberjar-name "mct.jar"
 
   :aliases {"rel-jar" ["do" "clean," "cljsbuild" "once" "adv," "uberjar"]
-            "unit" ["do" "test" ":unit"]
-            "integ" ["do" "test" ":integration"]})
+            "unit"    ["do" "test" ":unit"]
+            "integ"   ["do" "test" ":integration"]})

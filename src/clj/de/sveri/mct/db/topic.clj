@@ -8,8 +8,9 @@
 
 (defn get-topic-by-id [id] (first (select topic (where {:id id}) (limit 1))))
 
-(defn create-topic [name ]
-  (insert topic (values {:id (str (UUID/randomUUID)) :name name})))
+(defn create-topic [data]
+  (let [id (if (:id data) (:id data) (str (UUID/randomUUID)))]
+  (insert topic (values (merge data {:id id})))))
 
 (defn update-topic [uuid fields]
   (update topic (set-fields fields) (where {:id uuid})))

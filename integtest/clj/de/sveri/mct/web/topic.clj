@@ -24,7 +24,7 @@
 
 (deftest ^:integration update-wo-parent
   (u/sign-in "admin@localhost.de" "admin" "topic")
-  (click (find-element {:tag :a, :text "Gesundheit"}))
+  (click (find-element {:tag :a, :text "Computer Science"}))
   (clear "#topic-name")
   (let [t "t1"]
     (quick-fill-submit {"#topic-name" t}
@@ -33,7 +33,7 @@
 
 (deftest ^:integration update-with-parent
   (u/sign-in "admin@localhost.de" "admin" "topic")
-  (click (find-element {:tag :a, :text "Heilpraktiker"}))
+  (click (find-element {:tag :a, :text "Languages"}))
   (clear "#topic-name")
   (let [t "t1"]
     (quick-fill-submit {"#topic-name" t}

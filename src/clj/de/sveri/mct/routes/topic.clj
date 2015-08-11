@@ -23,7 +23,7 @@
 
 (defn create [name ]
   (try
-    (db/create-topic name )
+    (db/create-topic {:name name})
     (catch Exception e (timb/error e "Something went wrong creating topic.")
                        (layout/flash-result (str "An error occured.") "alert-danger")))
   (resp/redirect "/topic"))

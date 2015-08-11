@@ -7,10 +7,10 @@
 (use-fixtures :each s/browser-setup)
 (use-fixtures :once s/server-setup)
 
-(deftest ^:cur dont-repeat-questions
+(deftest ^:integration dont-repeat-questions
   ;(to (str s/test-base-url "question"))
   (u/sign-in "admin@localhost.de" "admin" "question")
   ;(is (.contains (text "body") (s/t :en :user/user_added)))
   ;(is (find-element {:css "div#flash-message.alert-success"}))
-  (wait-until #(= (title) "iatern"))
+  ;(wait-until #(= (title) "iatern"))
   )
