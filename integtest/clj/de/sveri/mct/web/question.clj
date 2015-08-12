@@ -26,7 +26,7 @@
     (is (selected? "#answer_correct_1"))))
 
 (deftest ^:integration update-question
-  (u/sign-in "local@local.de" "local" "question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba5cb")
+  (u/sign-in "local@local.de" "local" "question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb")
   (clear "#question")
   (clear "#answer_1")
   (clear "#answer_5")
@@ -66,4 +66,12 @@
                        {"#answer_1" a1}
                        {"#answer_2" a2}
                        {"#question" submit}))
-  (is (= 1 (count (find-elements {:tag :a, :text "Delete"})))))
+  (is (= 2 (count (find-elements {:tag :a, :text "Delete"})))))
+
+(deftest ^:integration user-sees-no-other
+  (u/sign-in "local@local.de" "local" "question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba5cb")
+  (is (.contains (text "body") "Page not found.")))
+
+(deftest ^:integration admin-sees-other
+  (u/sign-in "admin@localhost.de" "admin" "question/e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb")
+  (is (.contains (text "body") "Who is the creator of Clojure")))

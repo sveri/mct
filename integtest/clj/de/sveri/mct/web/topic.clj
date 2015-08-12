@@ -16,7 +16,7 @@
 
 (deftest ^:integration create-with-parent
   (u/sign-in "admin@localhost.de" "admin" "topic/create")
-  (select-option "#topic_id" {:value "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb"})
+  (select-option "#topic_id" {:value "3a5c29d8-05cf-4799-9959-779965732eed"})
   (let [t "t1"]
     (quick-fill-submit {"#topic-name" t}
                        {"#topic-name" submit})

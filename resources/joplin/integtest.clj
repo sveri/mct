@@ -23,7 +23,7 @@
                  :difficulty 1 :question "Which paradigm follows Clojure?"}
                 {:id         "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :user_email admin :topic_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb"
                  :difficulty 1 :question "Is Clojure statically or dynamically typed?"}
-                {:id         "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb" :user_email admin :topic_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb"
+                {:id         "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb" :user_email user :topic_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb"
                  :difficulty 1 :question "Who is the creator of Clojure?"}]
   )
 

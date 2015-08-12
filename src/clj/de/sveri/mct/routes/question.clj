@@ -20,12 +20,12 @@
                                          :quest_count   (range 1 11)}))
 
 (defn update-page [id]
-  (let [question (db/get-question-by-id id)]
+  (if-let [question (db/get-question-by-id id (u-service/get-logged-in-username))]
     (layout/render "question/create.html" {:question      question
-                                           ;:answers       answers
                                            :create_update "Update"
                                            :topics        (db-t/get-all-topics)
-                                           :quest_count   (range (+ 1 (count (:answer question))) 11)})))
+                                           :quest_count   (range (+ 1 (count (:answer question))) 11)})
+    (layout/render "404.html")))
 
 (defn delete-page [id]
   (layout/render "question/delete.html" {:id id}))
@@ -70,7 +70,6 @@
     (GET "/question/create" [] (create-page))
     (GET "/question/:id" [id] (update-page id))
     (POST "/question/create" req (create req))
-    ;(POST "/question/create" req (create topic_id question rating rate_count ))
     (GET "/question/delete/:id" [id] (delete-page id))
     (POST "/question/delete" [id delete_cancel] (delete id delete_cancel))
     (POST "/question/update" req (update (:params req)))))
