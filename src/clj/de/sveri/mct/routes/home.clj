@@ -20,13 +20,9 @@
 (defn cookies-page []
   (layout/render "home/cookies.html"))
 
-(defn example-page []
-  (layout/render "home/example.html"))
-
 (defroutes home-routes
            (GET "/contact" [] (contact-page))
            (GET "/tos" [] (tos-page))
            (GET "/cookies" [] (cookies-page))
            (GET "/" [] (home-page))
-           (GET "/example" [] (example-page))
            (POST "/index/select_topic" [topic_id] (home-page topic_id)))
