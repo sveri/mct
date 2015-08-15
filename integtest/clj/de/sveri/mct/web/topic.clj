@@ -16,11 +16,12 @@
 
 (deftest ^:integration create-with-parent
   (u/sign-in "admin@localhost.de" "admin" "topic/create")
-  (select-option "#topic_id" {:value "3a5c29d8-05cf-4799-9959-779965732eed"})
+  (select-option "#topic_id" {:value "2a5c29d8-05cf-4799-9959-779965732eed"})
   (let [t "t1"]
     (quick-fill-submit {"#topic-name" t}
                        {"#topic-name" submit})
-    (is (.contains (text "body") t))))                      ;TODO add test for parent topic
+    (is (.contains (text "body") t))
+    (is (= 2 (count (find-elements {:tag :td :text "Languages"}))))))
 
 (deftest ^:integration update-wo-parent
   (u/sign-in "admin@localhost.de" "admin" "topic")

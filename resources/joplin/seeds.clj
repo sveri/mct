@@ -8,8 +8,8 @@
 (def admin "admin@localhost.de")
 
 (def topics [{:id "1a5c29d8-05cf-4799-9959-779965732eed" :name "Computer Science"}
-             {:id "2a5c29d8-05cf-4799-9959-779965732eed" :name "Languages" :topic_id "2a5c29d8-05cf-4799-9959-779965732eed"}
-             {:id "3a5c29d8-05cf-4799-9959-779965732eed" :name "Clojure" :topic_id "1a5c29d8-05cf-4799-9959-779965732eed"}])
+             {:id "2a5c29d8-05cf-4799-9959-779965732eed" :name "Languages" :topic_id "1a5c29d8-05cf-4799-9959-779965732eed"}
+             {:id "3a5c29d8-05cf-4799-9959-779965732eed" :name "Clojure" :topic_id "2a5c29d8-05cf-4799-9959-779965732eed"}])
 
 (def questions [{:id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba5cb" :user_email admin :topic_id "3a5c29d8-05cf-4799-9959-779965732eed"
                  :difficulty 1 :question "What is Clojure?"}

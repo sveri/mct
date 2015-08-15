@@ -18,7 +18,7 @@
         {% for topic in topics %}
             <tr>
                 <td><a href="/topic/{{topic.id}}">{{topic.name}}</a></td>
-				<td>{{topic.topic_id}}</td>
+				<td>{{topic.parent-name}}</td>
 				<td><a class="btn btn-primary" href="/topic/delete/{{topic.id}}">Delete</a></td>
             </tr>
         {% endfor %}
