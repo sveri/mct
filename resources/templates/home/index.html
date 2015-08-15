@@ -32,6 +32,8 @@
 
         <form action="/index/answer_question" class="form" method="post">
             <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
+            <input name="question_id" id="question_id" type="hidden" value="{{question.id}}"/>
+            <input name="topic_id" type="hidden" value="{{selected-topic-id}}"/>
 
             <p><b>{{question.question}}:</b></p>
 
@@ -44,7 +46,7 @@
             {% endfor %}
 
 
-            <button class="btn btn-primary" type="submit">Next</button>
+            <button class="btn btn-primary" type="submit" id="answer-question">Next</button>
         </form>
 
     {% endif %}

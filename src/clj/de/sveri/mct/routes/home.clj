@@ -21,9 +21,14 @@
 (defn cookies-page []
   (layout/render "home/cookies.html"))
 
+(defn answer-question [{:keys [params]}]
+  (println params)
+  (home-page (:topic_id params)))
+
 (defroutes home-routes
            (GET "/contact" [] (contact-page))
            (GET "/tos" [] (tos-page))
            (GET "/cookies" [] (cookies-page))
            (GET "/" [] (home-page))
-           (POST "/index/select_topic" [topic_id] (home-page topic_id)))
+           (POST "/index/select_topic" [topic_id] (home-page topic_id))
+           (POST "/index/answer_question" req (answer-question req)))
