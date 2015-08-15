@@ -28,22 +28,26 @@
     <br>
     <br>
 
-    <form action="/index/answer_question" class="form" method="post">
-        <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
+    {% if selected-topic-id %}
 
-        <p><b>{{question.question}}:</b></p>
+        <form action="/index/answer_question" class="form" method="post">
+            <input name="__anti-forgery-token" type="hidden" value="{{af-token}}"/>
 
-        {% for answer in question.answer %}
+            <p><b>{{question.question}}:</b></p>
 
-
-            <input type="checkbox" name="answer_correct_{{forloop.counter}}"> {{answer.answer}}
-
-            <br>
-        {% endfor %}
+            {% for answer in question.answer %}
 
 
-        <button class="btn btn-primary" type="submit">Next</button>
-    </form>
+                <input type="checkbox" name="answer_correct_{{forloop.counter}}"> {{answer.answer}}
+
+                <br>
+            {% endfor %}
+
+
+            <button class="btn btn-primary" type="submit">Next</button>
+        </form>
+
+    {% endif %}
 
 </div>
 
