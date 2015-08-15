@@ -2,7 +2,8 @@
   (:require [compojure.core :refer [defroutes GET POST]]
             [de.sveri.mct.layout :as layout]
             [de.sveri.mct.db.topic :as db-t]
-            [de.sveri.mct.db.question :as db-q]))
+            [de.sveri.mct.db.question :as db-q]
+            [de.sveri.mct.service.question :as ser-q]))
 
 (defn home-page
   ([]
@@ -21,8 +22,11 @@
 (defn cookies-page []
   (layout/render "home/cookies.html"))
 
-(defn answer-question [{:keys [params]}]
-  (println params)
+(defn answer-question [{:keys [params] :as req}]
+  (let [sess-id (get-in req [:cookies "ring-session" :value])]
+    (println sess-id)
+    (ser-q/parse-answered-question sess-id params))
+  ;(clojure.pprint/pprint req)
   (home-page (:topic_id params)))
 
 (defroutes home-routes

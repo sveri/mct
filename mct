@@ -4998,3 +4998,126 @@
 -=[ mct started successfully using the development profile ]=-
 2015-Aug-15 21:07:13 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
 2015-Aug-15 21:07:13 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 21:07:30 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 21:07:42 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 21:07:42 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 21:12:25 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 21:12:36 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 21:12:36 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 21:14:49 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 21:15:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 21:15:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 21:39:53 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 21:40:04 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 21:40:04 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 22:05:26 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 22:05:35 +0200 sveri-PC ERROR [de.sveri.mct.middleware] - {:error #error {
+ :cause Wrong number of args (1) passed to: core/swap!
+ :via
+ [{:type clojure.lang.ArityException
+   :message Wrong number of args (1) passed to: core/swap!
+   :at [clojure.lang.AFn throwArity AFn.java 429]}]
+ :trace
+ [[clojure.lang.AFn throwArity AFn.java 429]
+  [clojure.lang.RestFn invoke RestFn.java 412]
+  [de.sveri.mct.service.question$parse_answered_question invoke question.clj 19]
+  [de.sveri.mct.routes.home$answer_question invoke home.clj 28]
+  [de.sveri.mct.routes.home$fn__22356 invoke home.clj 38]
+  [compojure.core$make_route$fn__7115 invoke core.clj 130]
+  [compojure.core$wrap_route_middleware$fn__7111 invoke core.clj 118]
+  [compojure.core$if_route$fn__7083 invoke core.clj 41]
+  [compojure.core$if_method$fn__7075 invoke core.clj 27]
+  [compojure.core$routing$fn__7122 invoke core.clj 144]
+  [clojure.core$some invoke core.clj 2570]
+  [compojure.core$routing doInvoke core.clj 144]
+  [clojure.lang.RestFn applyTo RestFn.java 139]
+  [clojure.core$apply invoke core.clj 632]
+  [compojure.core$routes$fn__7126 invoke core.clj 149]
+  [compojure.core$routing$fn__7122 invoke core.clj 144]
+  [clojure.core$some invoke core.clj 2570]
+  [compojure.core$routing doInvoke core.clj 144]
+  [clojure.lang.RestFn applyTo RestFn.java 139]
+  [clojure.core$apply invoke core.clj 632]
+  [compojure.core$routes$fn__7126 invoke core.clj 149]
+  [de.sveri.mct.middleware$add_req_properties$fn__11781 invoke middleware.clj 27]
+  [buddy.auth.accessrules$wrap_access_rules$fn__11675 invoke accessrules.clj 350]
+  [buddy.auth.middleware$wrap_authorization$fn__11702 invoke middleware.clj 81]
+  [noir_exception.core$wrap_internal_error$fn__11539 invoke core.clj 150]
+  [taoensso.tower.ring$wrap_tower$fn__11723 invoke ring.clj 53]
+  [ring.middleware.anti_forgery$wrap_anti_forgery$fn__5495 invoke anti_forgery.clj 90]
+  [de.sveri.clojure.commons.middleware.util$wrap_trimmings$fn__11753 invoke util.clj 16]
+  [selmer.middleware$wrap_error_page$fn__10602 invoke middleware.clj 9]
+  [prone.middleware$wrap_exceptions$fn__10767 invoke middleware.clj 81]
+  [clojure_miniprofiler$run_handler_profiled$fn__9768 invoke clojure_miniprofiler.clj 382]
+  [clojure_miniprofiler$run_handler_profiled invoke clojure_miniprofiler.clj 382]
+  [clojure_miniprofiler$wrap_miniprofiler$fn__9779 invoke clojure_miniprofiler.clj 429]
+  [noir.util.middleware$wrap_request_map$fn__12731 invoke middleware.clj 39]
+  [ring.middleware.keyword_params$wrap_keyword_params$fn__8328 invoke keyword_params.clj 35]
+  [ring.middleware.nested_params$wrap_nested_params$fn__8378 invoke nested_params.clj 84]
+  [ring.middleware.multipart_params$wrap_multipart_params$fn__12023 invoke multipart_params.clj 117]
+  [ring.middleware.params$wrap_params$fn__8294 invoke params.clj 64]
+  [ring.middleware.cookies$wrap_cookies$fn__4320 invoke cookies.clj 161]
+  [ring.middleware.absolute_redirects$wrap_absolute_redirects$fn__12131 invoke absolute_redirects.clj 36]
+  [ring.middleware.resource$wrap_resource$fn__12059 invoke resource.clj 28]
+  [ring.middleware.content_type$wrap_content_type$fn__8191 invoke content_type.clj 30]
+  [ring.middleware.not_modified$wrap_not_modified$fn__12109 invoke not_modified.clj 52]
+  [ring.middleware.x_headers$wrap_xss_protection$fn__11949 invoke x_headers.clj 71]
+  [ring.middleware.x_headers$wrap_frame_options$fn__11939 invoke x_headers.clj 38]
+  [ring.middleware.x_headers$wrap_content_type_options$fn__11944 invoke x_headers.clj 53]
+  [hiccup.middleware$wrap_base_url$fn__12203 invoke middleware.clj 12]
+  [ring.middleware.format_params$wrap_format_params$fn__12524 invoke format_params.clj 113]
+  [ring.middleware.format_params$wrap_format_params$fn__12524 invoke format_params.clj 113]
+  [ring.middleware.format_params$wrap_format_params$fn__12524 invoke format_params.clj 113]
+  [ring.middleware.format_response$wrap_format_response$fn__12653 invoke format_response.clj 174]
+  [noir.validation$wrap_noir_validation$fn__8166 invoke validation.clj 155]
+  [noir.cookies$noir_cookies$fn__12253 invoke cookies.clj 72]
+  [ring.middleware.cookies$wrap_cookies$fn__4320 invoke cookies.clj 161]
+  [noir.session$noir_flash$fn__4536 invoke session.clj 158]
+  [ring.middleware.flash$wrap_flash$fn__4461 invoke flash.clj 35]
+  [noir.session$noir_session$fn__4522 invoke session.clj 109]
+  [ring.middleware.session_timeout$wrap_idle_session_timeout$fn__4478 invoke session_timeout.clj 25]
+  [ring.middleware.session$wrap_session$fn__4441 invoke session.clj 102]
+  [ring.middleware.file$wrap_file$fn__12080 invoke file.clj 44]
+  [ring.middleware.file_info$wrap_file_info$fn__8220 invoke file_info.clj 69]
+  [ring.middleware.reload$wrap_reload$fn__15089 invoke reload.clj 22]
+  [ring.middleware.stacktrace$wrap_stacktrace_log$fn__14899 invoke stacktrace.clj 23]
+  [ring.middleware.stacktrace$wrap_stacktrace_web$fn__14961 invoke stacktrace.clj 86]
+  [ring.adapter.jetty$proxy_handler$fn__14765 invoke jetty.clj 24]
+  [ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a handle nil -1]
+  [org.eclipse.jetty.server.handler.HandlerWrapper handle HandlerWrapper.java 97]
+  [org.eclipse.jetty.server.Server handle Server.java 497]
+  [org.eclipse.jetty.server.HttpChannel handle HttpChannel.java 310]
+  [org.eclipse.jetty.server.HttpConnection onFillable HttpConnection.java 257]
+  [org.eclipse.jetty.io.AbstractConnection$2 run AbstractConnection.java 540]
+  [org.eclipse.jetty.util.thread.QueuedThreadPool runJob QueuedThreadPool.java 635]
+  [org.eclipse.jetty.util.thread.QueuedThreadPool$3 run QueuedThreadPool.java 555]
+  [java.lang.Thread run Thread.java 745]]}, :request {:jvm-locales [:de :en-US :en :de-DE], :ssl-client-cert nil, :protocol HTTP/1.1, :locale :de, :cookies {ring-session {:value 06df68dc-d908-4427-8733-57e877250cea}}, :remote-addr 0:0:0:0:0:0:0:1, :jvm-locale :de, :t' #object[clojure.core$partial$fn__4527 0x41df3820 clojure.core$partial$fn__4527@41df3820], :params {:__anti-forgery-token jopuyk9ezLXTsegtm5PMdlMpvSAupfhTTxzSKuj00wCGz42lTmasW5DV6cWHZbhJASf53z2maR7O5ruy, :question_id e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba7cb, :topic_id 2a5c29d8-05cf-4799-9959-779965732eed}, :flash nil, :headers {host localhost:3001, user-agent Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0, content-type application/x-www-form-urlencoded, cookie ring-session=06df68dc-d908-4427-8733-57e877250cea, content-length 196, referer http://localhost:3001/index/select_topic, connection keep-alive, accept text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8, accept-language de,en-US;q=0.7,en;q=0.3, accept-encoding gzip, deflate}, :server-port 3001, :content-length 196, :locales [:de :en-US :en :de-DE], :form-params {__anti-forgery-token jopuyk9ezLXTsegtm5PMdlMpvSAupfhTTxzSKuj00wCGz42lTmasW5DV6cWHZbhJASf53z2maR7O5ruy, question_id e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba7cb, topic_id 2a5c29d8-05cf-4799-9959-779965732eed}, :session/key 06df68dc-d908-4427-8733-57e877250cea, :query-params {}, :content-type application/x-www-form-urlencoded, :character-encoding nil, :t #object[taoensso.tower$make_t_uncached$new_t__10372 0x2d1afe7c taoensso.tower$make_t_uncached$new_t__10372@2d1afe7c], :uri /index/answer_question, :server-name localhost, :query-string nil, :body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x3d64151 HttpInputOverHTTP@3d64151], :edn-params nil, :multipart-params {}, :scheme :http, :request-method :post, :session {:ring.middleware.anti-forgery/anti-forgery-token jopuyk9ezLXTsegtm5PMdlMpvSAupfhTTxzSKuj00wCGz42lTmasW5DV6cWHZbhJASf53z2maR7O5ruy, :noir {:registration-allowed? true, :captcha-enabled? false}, :ring.middleware.session-timeout/idle-timeout 1439670935}, :tconfig {:fallback-locale :en, :dictionary {:en {:generic {:some_error Some error occured., :deletion_canceled Deletion canceled.}, :user {:deleted User deleted successfully., :captcha_wrong Please provide the correct captcha input., :pass_min_length Password must be at least 5 characters., :pass_changed Password changed., :updated User %s updated successfully., :user_added User added., :account_activated_title Account Activated, :pass_correct Please provide a correct password., :activate_account Please activate your account first., :account_activated Account activated, you can login now. Redirecting in five seconds..., :activationid_wrong Please provide a correct activation id., :account_created_title Account Created, :email_invalid A valid email is required., :email_failed Something went wrong sending the email, please contact us., :pass_match Entered passwords do not match., :username_wrong Please provide a correct username., :wrong_cur_pass Current password was incorrect., :username_exists This username already exists. Choose another., :signup_title Signup, :account_created Account creation successful. You will receive an email with an activation link. Please click on it to activate your account.}, :admin {:title User Overview}}}}}}
+2015-Aug-15 22:05:36 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 22:05:36 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 22:17:26 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 22:17:40 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 22:17:40 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 22:17:40 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 22:17:43 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 22:17:43 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 22:20:41 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 22:20:57 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 22:20:57 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 23:14:15 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 23:14:35 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 23:14:35 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 23:14:45 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-
+2015-Aug-15 23:15:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - mct is shutting down...
+2015-Aug-15 23:15:00 +0200 sveri-PC INFO [de.sveri.mct.components.server] - shutdown complete!
+2015-Aug-15 23:59:38 +0200 sveri-PC INFO [de.sveri.mct.components.server] - 
+-=[ mct started successfully using the development profile ]=-

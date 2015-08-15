@@ -55,7 +55,9 @@
 
                  [net.tanesha.recaptcha4j/recaptcha4j "0.0.8"]
 
-                 [com.taoensso/tower "3.0.2"]]
+                 [com.taoensso/tower "3.0.2"]
+
+                 [org.clojure/core.typed "0.3.11"]]
 
   :plugins [[de.sveri/closp-crud "0.1.3"]
             [lein-cljsbuild "1.0.5"]]
