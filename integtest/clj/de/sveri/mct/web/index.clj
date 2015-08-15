@@ -15,10 +15,11 @@
   ;(wait-until #(= (title) "iatern"))
   )
 
-(deftest ^:integration retain-selected-topic
+(deftest ^:cur retain-selected-topic
   (to (str s/test-base-url))
   (select-option "#topic_id" {:value "2a5c29d8-05cf-4799-9959-779965732eed"})
-  (find-element {:button "div#flash-message.alert-success"})
+  (click (find-element {:css "button#select-topic"}))
+  (is (selected? "option[value='2a5c29d8-05cf-4799-9959-779965732eed']"))
   ;(u/sign-in "admin@localhost.de" "admin" "question")
   ;(is (.contains (text "body") (s/t :en :user/user_added)))
   ;(is (find-element {:css "div#flash-message.alert-success"}))

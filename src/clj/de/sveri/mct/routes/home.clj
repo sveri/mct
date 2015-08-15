@@ -9,7 +9,8 @@
    (layout/render "home/index.html" {:topics (db-t/get-all-topics)}))
   ([topic_id]
    (layout/render "home/index.html" {:topics (db-t/get-all-topics)
-                                     :question (db-q/get-random-question topic_id)})))
+                                     :question (db-q/get-random-question topic_id)
+                                     :selected-topic-id topic_id})))
 
 (defn contact-page []
   (layout/render "home/contact.html"))
