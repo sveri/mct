@@ -20,7 +20,7 @@
                                          :quest_count   (range 1 11)}))
 
 (defn update-page [id]
-  (if-let [question (db/get-question-by-id id (u-service/get-logged-in-username))]
+  (if-let [question (db/get-question-by-id id (u-service/get-logged-in-username) (u-service/is-admin?))]
     (layout/render "question/create.html" {:question      question
                                            :create_update "Update"
                                            :topics        (db-t/get-all-topics)

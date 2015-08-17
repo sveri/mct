@@ -13,17 +13,18 @@
           (with answer)
           (where (if (u-ser/is-admin?) {} {:user_email (u-ser/get-logged-in-username)}))))
 
-(defn user-or-admin [user-id]
+(defn user-or-admin [user-id is-admin?]
   (cond
-    (u-ser/is-admin?) {}
+    is-admin? {}
     (= user-id nil) {}
     :else {:user_email user-id}))
 
 (defn get-question-by-id
   ([id] (get-question-by-id id nil))
-  ([id user]
+  ([id user] (get-question-by-id id user false))
+  ([id user is-admin?]
     (first (select question
-                   (where (merge {:id id} (user-or-admin user)))
+                   (where (merge {:id id} (user-or-admin user is-admin?)))
                    (with topic (fields topic-fields))
                    (with answer)
                    (limit 1)))))
