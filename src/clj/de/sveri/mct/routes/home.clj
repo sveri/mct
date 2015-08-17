@@ -8,9 +8,9 @@
 (defn home-page
   ([]
    (layout/render "home/index.html" {:topics (db-t/get-all-topics)}))
-  ([topic_id]
+  ([topic_id & [answered-questions]]
    (layout/render "home/index.html" {:topics (db-t/get-all-topics)
-                                     :question (db-q/get-random-question topic_id)
+                                     :question (db-q/get-random-question topic_id answered-questions)
                                      :selected-topic-id topic_id})))
 
 (defn contact-page []
@@ -25,9 +25,9 @@
 (defn answer-question [{:keys [params] :as req}]
   (let [sess-id (get-in req [:cookies "ring-session" :value])]
     (println sess-id)
-    (ser-q/parse-answered-question sess-id params))
-  ;(clojure.pprint/pprint req)
-  (home-page (:topic_id params)))
+    (ser-q/parse-answered-question sess-id params)
+    (home-page (:topic_id params) (ser-q/get-answered-questions sess-id @ser-q/asked-questions))))
+  ;(clojure.pprint/pprint req))
 
 (defroutes home-routes
            (GET "/contact" [] (contact-page))

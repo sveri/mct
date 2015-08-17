@@ -45,4 +45,4 @@
 
 (defn get-logged-in-username [] (when-let [id (sess/get :identity)] (name id)))
 
-(defn is-admin? [] (when-let [role (sess/get :role)] (= "admin" role)))
+(defn is-admin? [] (when-let [role (sess/get :role nil)] (= "admin" role)))

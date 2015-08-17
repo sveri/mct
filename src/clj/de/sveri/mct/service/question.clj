@@ -1,5 +1,6 @@
 (ns de.sveri.mct.service.question
-  (:require [clojure.core.typed :as t]))
+  (:require [clojure.core.typed :as t]
+            [de.sveri.mct.types :as ty]))
 
 (def asked-questions (atom {}))
 
@@ -21,5 +22,6 @@
   (println @asked-questions))
 
 
-(t/defn get-answered-questions [sess-id :- String ])
+(t/defn get-answered-questions [sess-id :- String sess-map :- ty/sess-quests] :- ty/questions
+  (get sess-map sess-id []))
 

@@ -12,7 +12,7 @@
   (select-option "#topic_id" {:value "2a5c29d8-05cf-4799-9959-779965732eed"})
   (click (find-element {:css "button#select-topic"}))
   (let [asked-quests (atom [])]
-    (while (and (< (count @asked-quests) 9) (= (count @asked-quests) (count (into #{} @asked-quests))))
+    (while (and (< (count @asked-quests) 6) (= (count @asked-quests) (count (into #{} @asked-quests))))
       (swap! asked-quests conj (value (find-element {:css "input#question_id"})))
       (click (find-element {:css "button#answer-question"}))
       (is (= (count @asked-quests) (count (into #{} @asked-quests)))))))

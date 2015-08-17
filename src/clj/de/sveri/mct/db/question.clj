@@ -24,7 +24,6 @@
   ([id user]
     (first (select question
                    (where (merge {:id id} (user-or-admin user)))
-                   ;(where (merge (if user {:user_email user} {}) {:id id}))
                    (with topic (fields topic-fields))
                    (with answer)
                    (limit 1)))))
@@ -39,9 +38,10 @@
 
 (defn delete-question [id] (delete question (where {:id id})))
 
-(defn get-random-question [topic_id]
+(defn get-random-question [topic_id & [answered-questions]]
   (let [qs (select question
                    (where (if (= "Random" topic_id) {} {:topic_id topic_id}))
                    (with answer))
-        n (rand-int (count qs))]
-    (nth qs n)))
+        new-qs (filter #(not (some #{(:id %)} answered-questions)) qs)
+        n (rand-int (count new-qs))]
+    (nth new-qs n)))
