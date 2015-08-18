@@ -7,7 +7,7 @@
 (use-fixtures :each s/browser-setup)
 (use-fixtures :once s/server-setup)
 
-(deftest ^:cur dont-repeat-questions
+(deftest ^:integration dont-repeat-questions
   (to (str s/test-base-url))
   (select-option "#topic_id" {:value "2a5c29d8-05cf-4799-9959-779965732eed"})
   (click (find-element {:css "button#select-topic"}))

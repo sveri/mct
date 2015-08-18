@@ -2,16 +2,27 @@
   (:require [korma.core :refer [defentity many-to-many select where limit insert values update delete set-fields with
                                 fields]]
             [de.sveri.mct.db.entities :refer [question topic answer user]]
-            [de.sveri.mct.service.user :as u-ser])
+            [de.sveri.mct.service.user :as u-ser]
+            [clojure.core.typed :as t]
+            [de.sveri.mct.types :as ty])
   (:import (java.util UUID)))
 
 (def topic-fields [:topic.name :topic_name])
 
-(defn get-all-questions []
+(t/ann get-all-questions [ty/user -> t/Any])
+(defn get-all-questions [user]
+  (println (u-ser/is-admin? user) )
   (select question
           (with topic (fields topic-fields))
           (with answer)
-          (where (if (u-ser/is-admin?) {} {:user_email (u-ser/get-logged-in-username)}))))
+
+          ;(where
+          ;  (if
+          ;    (u-ser/is-admin? user)
+          ;    {}
+          ;    {:user_email
+          ;     (:email user)}))
+          ))
 
 (defn user-or-admin [user-id is-admin?]
   (cond

@@ -70,8 +70,8 @@ Your Team"
   (stop-server))
 
 (defn browser-setup [f]
-  (start-browser :firefox)
-  ;(start-browser :htmlunit)
+  ;(start-browser :firefox)
+  (start-browser :htmlunit)
   (f)
   (stop-browser))
 

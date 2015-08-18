@@ -24,10 +24,8 @@
 
 (defn answer-question [{:keys [params] :as req}]
   (let [sess-id (get-in req [:cookies "ring-session" :value])]
-    (println sess-id)
     (ser-q/parse-answered-question sess-id params)
     (home-page (:topic_id params) (ser-q/get-answered-questions sess-id @ser-q/asked-questions))))
-  ;(clojure.pprint/pprint req))
 
 (defroutes home-routes
            (GET "/contact" [] (contact-page))

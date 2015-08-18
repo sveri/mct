@@ -101,28 +101,28 @@
 
                        :plugins      [[lein-ring "0.9.0"]
                                       [lein-figwheel "0.3.3"]
-                                      [joplin.lein "0.2.15"]
+                                      [joplin.lein "0.2.17"]
                                       [test2junit "1.1.1"]]
 
                        :dependencies [[org.bouncycastle/bcprov-jdk15on "1.52"]
 
                                       ; use this for htmlunit or an older firefox version
-                                      ;[clj-webdriver "0.6.1"
-                                      ; :exclusions [org.seleniumhq.selenium/selenium-server]]
+                                      [clj-webdriver "0.6.1"
+                                       :exclusions [org.seleniumhq.selenium/selenium-server]]
 
                                       ; uncomment this to use current firefox version (does not work with htmlunit
-                                      [clj-webdriver "0.6.1"
-                                       :exclusions
-                                       [org.seleniumhq.selenium/selenium-server
-                                        org.seleniumhq.selenium/selenium-java
-                                        org.seleniumhq.selenium/selenium-remote-driver]]
+                                      ;[clj-webdriver "0.6.1"
+                                      ; :exclusions
+                                      ; [org.seleniumhq.selenium/selenium-server
+                                      ;  org.seleniumhq.selenium/selenium-java
+                                      ;  org.seleniumhq.selenium/selenium-remote-driver]]
 
                                       [org.seleniumhq.selenium/selenium-server "2.46.0"]
                                       [ring-mock "0.1.5"]
                                       [ring/ring-devel "1.4.0"]
                                       [pjstadig/humane-test-output "0.7.0"]
-                                      [joplin.core "0.2.15"]
-                                      [joplin.jdbc "0.2.15"]]
+                                      [joplin.core "0.2.17"]
+                                      [joplin.jdbc "0.2.17"]]
 
                        :injections   [(require 'pjstadig.humane-test-output)
                                       (pjstadig.humane-test-output/activate!)]

@@ -1,6 +1,8 @@
 (ns de.sveri.mct.types
-  (:require [clojure.core.typed :refer [HVec defalias]])
+  (:require [clojure.core.typed :refer [HVec defalias HMap Num]])
   (:import (clojure.lang APersistentMap)))
+
+(defalias user (HMap :mandatory {:role String :email String}))
 
 (defalias questions (HVec [String]))
 

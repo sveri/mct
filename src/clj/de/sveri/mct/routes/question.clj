@@ -11,7 +11,7 @@
             [de.sveri.mct.service.question :as q-service]))
 
 (defn index-page []
-  (layout/render "question/index.html" {:questions (db/get-all-questions)
+  (layout/render "question/index.html" {:questions (db/get-all-questions (u-service/get-logged-in-user))
                                         :cols      ["question" "Topic" "rating" "rate_count"]}))
 
 (defn create-page []

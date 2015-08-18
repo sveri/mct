@@ -50,10 +50,9 @@
     (is (.contains (text "#answer_5") a7))
     (is (selected? "#answer_correct_3"))))
 
-(deftest ^:integration admin-sees-all
+(deftest ^:cur admin-sees-all
   (u/sign-in "admin@localhost.de" "admin" "question")
-  (with-redefs [de.sveri.mct.service.user/is-admin? (fn [] true)]
-    (is (= (count (db-q/get-all-questions)) (count (find-elements {:tag :a, :text "Delete"}))))))
+  (is (= (count (db-q/get-all-questions {:email "" :role "admin"})) (count (find-elements {:tag :a, :text "Delete"})))))
 
 (deftest ^:integration user-sees-own
   (u/sign-in "local@local.de" "local" "question/create")
