@@ -1,7 +1,7 @@
 (ns de.sveri.mct.db.entities
   (:require [korma.core :refer [defentity belongs-to has-many has-one pk]]))
 
-(declare topic question user answer)
+(declare topic question user answer response)
 
 (defentity user
            (pk :email))
@@ -18,3 +18,7 @@
            (has-many answer)
            )
 
+(defentity response
+           (has-one question)
+           (has-one user)
+           (has-one answer))

@@ -7,6 +7,5 @@ question TEXT,
 rating INTEGER DEFAULT 0 NOT NULL,
 rate_count INTEGER DEFAULT 0 NOT NULL,
 difficulty INTEGER DEFAULT 1 NOT NULL,
---question_uuid VARCHAR(43) NOT NULL,
 FOREIGN KEY (user_email) REFERENCES user(email),
 FOREIGN KEY (topic_id) REFERENCES topic(id));
