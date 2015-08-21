@@ -1,4 +1,4 @@
-(ns de.sveri.mct.web.question
+(ns de.sveri.mct.web.question.question
   (:require [de.sveri.mct.web.setup :as s]
             [clojure.test :refer :all]
             [clj-webdriver.taxi :refer :all]
@@ -50,7 +50,7 @@
     (is (.contains (text "#answer_5") a7))
     (is (selected? "#answer_correct_3"))))
 
-(deftest ^:cur admin-sees-all
+(deftest ^:integration admin-sees-all
   (u/sign-in "admin@localhost.de" "admin" "question")
   (is (= (count (db-q/get-all-questions {:email "" :role "admin"})) (count (find-elements {:tag :a, :text "Delete"})))))
 

@@ -38,10 +38,10 @@
             <p><b>{{question.question}}:</b></p>
 
             {% for answer in question.answer %}
-
-
-                <input type="checkbox" name="answer_correct_{{forloop.counter}}"> {{answer.answer}}
-
+                <input name="answer_correct_id_{{forloop.counter}}" type="hidden" value="{{answer.id}}"
+                       id="answer_correct_id_{{forloop.counter}}"/>
+                <input type="checkbox" name="answer_correct_{{forloop.counter}}"
+                       id="answer_correct_{{forloop.counter}}">{{answer.answer}}
                 <br>
             {% endfor %}
 

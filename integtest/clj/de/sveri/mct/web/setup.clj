@@ -46,12 +46,12 @@ Your Team"
 
 (def test-base-url (str "http://localhost:3001/"))
 
-(defn start-browser [browser]
+(defn start-browser [browser & [seed]]
   (j/reset-db
     {:db       {:type :sql,
                 :url  db-uri}
      :migrator migrators
-     :seed "joplin.integtest/clojure-quest"})
+     :seed     (or seed "joplin.integtest/clojure-quest")})
   (w/set-driver! {:browser browser}))
 
 (defn stop-browser []
@@ -70,8 +70,8 @@ Your Team"
   (stop-server))
 
 (defn browser-setup [f]
-  ;(start-browser :firefox)
-  (start-browser :htmlunit)
+  (start-browser :firefox)
+  ;(start-browser :htmlunit)
   (f)
   (stop-browser))
 

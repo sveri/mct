@@ -60,3 +60,5 @@
   (dorun (map t/create-topic topics))
   (dorun (map q/create-question questions))
   (dorun (map a/create-answer answers)))
+
+;(defn answered-questions)
