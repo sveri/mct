@@ -2,7 +2,7 @@
   (:require [clojure.core.typed :as t]
             [de.sveri.mct.types :as ty]))
 
-(def asked-questions (atom {}))
+;(def asked-questions (atom {}))
 
 (defn- correct->boolean [idx params]
   (if ((keyword (str "answer_correct_" idx)) params) true false))
@@ -17,11 +17,12 @@
           a)))
     [] (range 1 (+ 1 a-count))))
 
-(defn parse-answered-question [sess-id {:keys [question_id topic_id] :as params}]
-  (swap! asked-questions (fn [old] (let [v (get old sess-id [])] (assoc old sess-id (conj v question_id)))))
-  (println @asked-questions))
+;(defn parse-answered-question [sess-id {:keys [question_id topic_id] :as params}]
+;  (swap! asked-questions (fn [old] (let [v (get old sess-id [])] (assoc old sess-id (conj v question_id)))))
+;  (println @asked-questions))
 
 
-(t/defn get-answered-questions [sess-id :- String sess-map :- ty/sess-quests] :- ty/questions
-  (get sess-map sess-id []))
+;(t/defn get-answered-questions [sess-id :- String sess-map :- ty/sess-quests] :- ty/questions
+;  (get sess-map sess-id []))
+
 

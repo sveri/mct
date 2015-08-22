@@ -23,6 +23,7 @@
   (layout/render "home/cookies.html"))
 
 (defn answer-question [{:keys [params] :as req}]
+  (clojure.pprint/pprint params)
   (let [sess-id (get-in req [:cookies "ring-session" :value])]
     (ser-q/parse-answered-question sess-id params)
     (home-page (:topic_id params) (ser-q/get-answered-questions sess-id @ser-q/asked-questions))))
