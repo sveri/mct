@@ -22,7 +22,7 @@
                 {:id         "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :user_email admin :topic_id "3a5c29d8-05cf-4799-9959-779965732eed"
                  :difficulty 1 :question "Which paradigm follows Clojure?"}
                 {:id         "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :user_email admin :topic_id "3a5c29d8-05cf-4799-9959-779965732eed"
-                 :difficulty 1 :question "Is Clojure statically or dynamically typed?"}
+                 :difficulty 1 :question "Which type system uses Clojure?"}
                 {:id         "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb" :user_email user :topic_id "3a5c29d8-05cf-4799-9959-779965732eed"
                  :difficulty 1 :question "Who is the creator of Clojure?"}]
   )
@@ -44,11 +44,14 @@
               {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba8cb" :answer "Ready Eval Print Loop" :correct 0}
               {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba8cb" :answer "Read Eval Print Loop" :correct 1}
 
-              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :answer "Functional." :correct 1}
-              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :answer "Object Oriented." :correct 0}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :answer "Functional Programming." :correct 1}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :answer "Object Oriented Programming." :correct 0}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :answer "Logical Programming." :correct 0}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba9cb" :answer "Procedural Programming." :correct 0}
 
-              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :answer "Statically." :correct 0}
-              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :answer "Dynamically." :correct 1}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :answer "Static Typing." :correct 0}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :answer "Dynamic Typing." :correct 1}
+              {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba4cb" :answer "Duck Typing." :correct 0}
 
               {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb" :answer "Stuart Halloway." :correct 0}
               {:question_id "e4c7cfc0-d2cf-4ce2-b0a8-f7fb10bba3cb" :answer "James Gosling." :correct 0}
