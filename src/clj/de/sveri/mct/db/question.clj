@@ -11,18 +11,10 @@
 
 (t/ann get-all-questions [ty/user -> t/Any])
 (defn get-all-questions [user]
-  (println (u-ser/is-admin? user) )
   (select question
           (with topic (fields topic-fields))
           (with answer)
-
-          ;(where
-          ;  (if
-          ;    (u-ser/is-admin? user)
-          ;    {}
-          ;    {:user_email
-          ;     (:email user)}))
-          ))
+          (where (if (u-ser/is-admin? user) {} {:user_email (:email user)}))))
 
 (defn user-or-admin [user-id is-admin?]
   (cond

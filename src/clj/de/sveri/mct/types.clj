@@ -7,3 +7,5 @@
 (defalias questions (HVec [String]))
 
 (defalias sess-quests (APersistentMap String questions))
+
+(defalias response (HMap :mandatory {:user_id String :question_id String :answer_id String}))
