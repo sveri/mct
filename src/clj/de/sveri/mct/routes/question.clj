@@ -14,17 +14,18 @@
   (layout/render "question/index.html" {:questions (db/get-all-questions (u-service/get-logged-in-user))
                                         :cols      ["question" "Topic" "rating" "rate_count"]}))
 
-(defn create-page []
+(defn create-page [config]
   (layout/render "question/create.html" {:create_update "Create"
                                          :topics        (db-t/get-all-topics)
-                                         :quest_count   (range 1 11)}))
+                                         :answer_count   (range 1 (+ 1 (:max-answers config)))}))
 
-(defn update-page [id]
+(defn update-page [config id]
   (if-let [question (db/get-question-by-id id (u-service/get-logged-in-username) (u-service/is-admin?))]
     (layout/render "question/create.html" {:question      question
                                            :create_update "Update"
                                            :topics        (db-t/get-all-topics)
-                                           :quest_count   (range (+ 1 (count (:answer question))) 11)})
+                                           :answer_count   (range (+ 1 (count (:answer question)))
+                                                                  (+ 1 (:max-answers config)))})
     (layout/render "404.html")))
 
 (defn delete-page [id]
@@ -64,11 +65,11 @@
                          (layout/flash-result (str "An error occured.") "alert-danger"))))
   (resp/redirect "/question"))
 
-(defn question-routes []
+(defn question-routes [config]
   (routes
     (GET "/question" [] (index-page))
-    (GET "/question/create" [] (create-page))
-    (GET "/question/:id" [id] (update-page id))
+    (GET "/question/create" [] (create-page config))
+    (GET "/question/:id" [id] (update-page config id))
     (POST "/question/create" req (create req))
     (GET "/question/delete/:id" [id] (delete-page id))
     (POST "/question/delete" [id delete_cancel] (delete id delete_cancel))
