@@ -33,7 +33,7 @@
   (-> (app-handler
         (into [] (concat (when (:registration-allowed? config) [(registration-routes config)])
                          ;; add your application routes here
-                         [home-routes (question-routes config) (topic-routes)
+                         [(home-routes config) (question-routes config) (topic-routes)
                           (user-routes config) base-routes]))
         ;; add custom middleware here
         :middleware (load-middleware config (:tconfig locale))

@@ -1,9 +1,12 @@
 (ns de.sveri.mct.routes.home
-  (:require [compojure.core :refer [defroutes GET POST]]
+  (:require [compojure.core :refer [routes GET POST]]
+            [clojure.string :as s]
             [de.sveri.mct.layout :as layout]
             [de.sveri.mct.db.topic :as db-t]
             [de.sveri.mct.db.question :as db-q]
-            [de.sveri.mct.service.question :as ser-q]))
+            [de.sveri.mct.db.response :as db-r]
+            [de.sveri.mct.service.response :as ser-r]
+            [de.sveri.mct.service.user :as ser-u]))
 
 (defn home-page
   ([]
@@ -22,17 +25,20 @@
 (defn cookies-page []
   (layout/render "home/cookies.html"))
 
-(defn answer-question [{:keys [params] :as req}]
-  (clojure.pprint/pprint params)
-  (let [sess-id (get-in req [:cookies "ring-session" :value])]
-    ;(ser-q/parse-answered-question sess-id params)
-    ;(home-page (:topic_id params) (ser-q/get-answered-questions sess-id @ser-q/asked-questions))
-    ))
+(defmulti answer-question (fn [_ _] (s/blank? (ser-u/get-logged-in-username))))
 
-(defroutes home-routes
-           (GET "/contact" [] (contact-page))
-           (GET "/tos" [] (tos-page))
-           (GET "/cookies" [] (cookies-page))
-           (GET "/" [] (home-page))
-           (POST "/index/select_topic" [topic_id] (home-page topic_id))
-           (POST "/index/answer_question" req (answer-question req)))
+(defmethod answer-question true [{:keys [params]} config]
+  (println "not logged in"))
+
+(defmethod answer-question false [{:keys [params]} config]
+  (doseq [response (ser-r/params->db config params (ser-u/get-logged-in-username))]
+    (db-r/create-response response)))
+
+(defn home-routes [config]
+  (routes
+    (GET "/contact" [] (contact-page))
+    (GET "/tos" [] (tos-page))
+    (GET "/cookies" [] (cookies-page))
+    (GET "/" [] (home-page))
+    (POST "/index/select_topic" [topic_id] (home-page topic_id))
+    (POST "/index/answer_question" req (answer-question req config))))
